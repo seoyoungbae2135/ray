@@ -1,0 +1,49 @@
+<!-- table2.htlm -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 테이블과css </title>
+    <link rel="shortcut icon" href="./grode-logo.ico">
+
+    <!-- css를 사용하려면 head태그안에 style 태그를 만들어서 내부에 작성해야한다 -->
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gasoek+One&family=Noto+Sans+KR:wght@500&family=Poor+Story&display=swap');
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border:1px solid black;
+            width:100px;
+            height:50px;
+            background-color:aquamarine;
+            text-align:center;
+            font-size:25px;  /* 글씨크기변경 */
+            color:blue; /* 글씨 색 */
+            font-weight: 900; /* 글씨굵기 */
+            font-family: "Noto Sans Korean"; /* 내컴에있는 폰트만 적용, web폰트도 있음 */
+            vertical-align: top; /* 수직정렬 */
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>이순신</td>
+            <td>34세</td>
+            <td>군인</td>
+        </tr>
+        <tr>
+            <td>정약용</td>
+            <td>39세</td>
+            <td>과학자</td>
+        </tr>
+
+    </table>
+</body>
+</html>
+
+<!--https://www.squarespace.com/logo 무료로고제작
+    로고파일을 ioc파일로 변환해야한다 hipdf.com-->
