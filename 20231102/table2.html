@@ -9,7 +9,7 @@
 
     <!-- css를 사용하려면 head태그안에 style 태그를 만들어서 내부에 작성해야한다 -->
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gasoek+One&family=Noto+Sans+KR:wght@500&family=Poor+Story&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gasoek+One&family=Noto+Sans+KR:wght@500&family=Poor+Story&display=swap');
         table{
             border-collapse: collapse;
         }
@@ -19,26 +19,54 @@
             height:50px;
             background-color:aquamarine;
             text-align:center;
-            font-size:25px;  /* 글씨크기변경 */
-            color:blue; /* 글씨 색 */
-            font-weight: 900; /* 글씨굵기 */
-            font-family: "Noto Sans Korean"; /* 내컴에있는 폰트만 적용, web폰트도 있음 */
-            vertical-align: top; /* 수직정렬 */
+            font-size:25px;   글씨크기변경 
+            color:blue;  글씨 색 
+            font-weight: 900;  글씨굵기 
+            font-family: "Noto Sans Korean";  내컴에있는 폰트만 적용, web폰트도 있음 
+            vertical-align: top;  수직정렬 
+        } */
+        /* .클래스명 -> .은 클래스를 의미함다. */
+        .name{
+            width:200px;
+            background-color:ivory; 
+            height:50px;
+            text-aligne: center;
+        }
+        .age{
+            border:2px dotted red;
+            font-size:40px;
+        }
+
+        .info .job{
+            border:3px solid yellow;
+        } 
+        .job{
+            border:1px solid blue;
+            width:100;
+        }
+        .info{
+            font-size:20px;
+        }
+
+        .name:hover{
+            font-size:30px;
+            color:blue;
+            background-color:aquamarine;
         }
     </style>
 </head>
 <body>
 
-    <table>
+    <table class="info">
         <tr>
-            <td>이순신</td>
-            <td>34세</td>
-            <td>군인</td>
+            <td class="name">이순신</td>
+            <td class="age">34세</td>
+            <td class="job">군인</td>
         </tr>
         <tr>
-            <td>정약용</td>
-            <td>39세</td>
-            <td>과학자</td>
+            <td class="name">정약용</td>
+            <td class="age">39세</td>
+            <td class="job">과학자</td>
         </tr>
 
     </table>
