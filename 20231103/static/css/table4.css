@@ -1,0 +1,40 @@
+/* table4.css */
+.house{
+    border-collapse: collapse;
+    font-size:17px;
+}
+.house tr th{
+    background:rgb(51,49,138);
+    border-bottom:4px solid #ccc;
+    color:#fff
+}
+.detail, .expense{
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.date{width:150px;}
+.detail{width:250px;}
+.income{width:150px}
+.expense{width:150px}
+.payment{width:150px}
+
+.house tr td{
+    border-bottom:2px solid #ddd;
+    height:30px;
+}
+.dateCell, .incomeCell, .expenseCell,.paymentCell{
+    text-align:center;
+}
+.dateCell{
+    background:yellow;
+}
+.incomeCell{
+    background:rgb(96, 249, 139);
+}
+.expenseCell{
+    background:rgb(233, 90, 90);
+    color:#fff;
+}
+.detailCell:hover{
+    background:#ddd;
+}

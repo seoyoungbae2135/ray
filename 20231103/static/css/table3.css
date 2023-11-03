@@ -1,1 +1,44 @@
 /* table3.css */
+/* 이름 만들때 표기법
+   카멜케이스, 스네이크케이스
+   카멜케이스 - myPageInfo 소문자 중간에 대문자 삽입하여 작성. 
+                단어가 새로시작할때 대문자사용
+   스네이크표기법 - my_page_info  언더바를 이용하여 작성 데이터베이스에서 많이 사용
+   웹에서는 주로 카멜표기법을 사용(개발자들이 암묵적으로 사용)
+   파스칼표기법 - MypageInfo 첫단어를 대문자로 표현
+   헝가리안표기법 - 어느부분에 사용되는이름인지 표기하는 방법 g_val, s_val
+*/
+.box{
+    border-collapse: collapse; /*td간격제거*/
+}
+.box tr th{
+    border-bottom:3px solid #aaa;
+}
+.num{
+    width:50px;
+    height:40px;
+}
+.name{
+    width:150px;
+}
+.score{
+    width:50px
+}
+.rank{
+    width:40px;
+}
+.box tr td{
+    text-align:center;
+    height:30px;
+    border-bottom:1px solid #bbb;
+}
+.nameTd{
+    font-weight:800;
+}
+.nameTd:hover{
+    background-color:cadetblue;
+    color:#fff;
+}
+.rankTd{
+    color:red;
+}
