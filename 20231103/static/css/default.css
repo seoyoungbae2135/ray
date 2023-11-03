@@ -5,7 +5,24 @@ body{
 #wrap{
     width:1200px;
     border-collapse:collapse;
+    margin:20px auto;
 }
 #wrap tr td{
     border:1px solid #000;
+    border-radius:20px;
+}
+
+#header{
+    height:80px;
+    width:100%;
+    background:#fff;
+    font-weight:800;
+    font-size:19px;
+}
+#slideWrap{
+    width:600px;
+    height:700px;
+}
+#drinkWrap{
+    width:600px;
 }
