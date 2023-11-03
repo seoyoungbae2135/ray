@@ -8,7 +8,7 @@ body{
     margin:20px auto;
 }
 #wrap tr td{
-    border:1px solid #000;
+    /* border:1px solid #000; */
     
 }
 
@@ -26,6 +26,7 @@ body{
 }
 #drinkWrap{
     width:600px;
+    height:350px;
 }
 .menuItem{
     padding-left:50px;
@@ -45,3 +46,21 @@ body{
     width:500px;
 }
 .slideImage img{width:100%;}
+
+
+.drinkMenu{
+    list-style:none; /*<li>의 점을 제거*/
+    font-size:20px;
+    font-weight:800;
+}
+
+.drinkMenu li{
+    height:35px;
+    width:150px;
+    border-bottom:3px solid #ffe;
+    cursor:pointer;
+}
+
+#eventWrap{
+    height:350px;
+}
