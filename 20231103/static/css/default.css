@@ -9,10 +9,11 @@ body{
 }
 #wrap tr td{
     border:1px solid #000;
-    border-radius:20px;
+    
 }
 
 #header{
+    border-radius:20px;
     height:80px;
     width:100%;
     background:#fff;
@@ -26,3 +27,21 @@ body{
 #drinkWrap{
     width:600px;
 }
+.menuItem{
+    padding-left:50px;
+}
+.slide{width:100%;} /*부모태그인 #slideWrap의 너비와 같아진다.*/
+.leftMove, .rightMove{
+    width:50px;
+    font-size:50px;
+    text-align:center;
+    color:black;
+}
+
+.leftMove i:hover, .rightMove i:hover{ /*커서모양바꾸기*/
+    cursor:pointer;
+}
+.slideImage{
+    width:500px;
+}
+.slideImage img{width:100%;}
