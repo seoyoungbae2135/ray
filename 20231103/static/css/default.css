@@ -1,0 +1,11 @@
+body{
+    background-color:#fede29;
+    margin:0;
+}
+#wrap{
+    width:1200px;
+    border-collapse:collapse;
+}
+#wrap tr td{
+    border:1px solid #000;
+}
