@@ -1,0 +1,43 @@
+/* table 연습 */
+body{
+    background-color:#faed7d;
+    margin:0;
+}
+#wrap{
+    width:1200px;
+    border-collapse:collapse;
+    margin:20px auto;
+}
+#wrap tr td{
+    border:2px solid #000;
+}
+#header{
+    border-radius:10px;
+    height:100px;
+    width:100%;
+    background-color:#fff;
+    font-weight:800;
+    font-size:20px;
+}
+#slideWrap{
+    width:600px;
+    height:700px;
+}
+#drinkWrap{
+    width:600px;
+    height:350px;
+}
+.menuItem{
+    padding-left:50px;
+}
+.slide{width:100%;}
+.leftMove, .rightMove{
+    width:50px;
+    font-size:50px;
+    text-align:center;
+    color:#000;
+}
+.slideImage{
+    width:500px;
+}
+.slideImage img{width:100%;}

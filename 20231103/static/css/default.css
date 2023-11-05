@@ -8,10 +8,9 @@ body{
     margin:20px auto;
 }
 #wrap tr td{
-    /* border:1px solid #000; */
+    border:1px solid #000;
     
 }
-
 #header{
     border-radius:20px;
     height:80px;
