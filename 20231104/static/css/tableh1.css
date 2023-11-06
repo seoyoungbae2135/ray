@@ -37,7 +37,27 @@ body{
     text-align:center;
     color:#000;
 }
+.leftMove i:hover, .rightMove i:hover{
+    cursor:pointer;
+}
 .slideImage{
     width:500px;
 }
 .slideImage img{width:100%;}
+.drinkMenu{
+    list-style:none;
+    font-size:20px;
+    font-weight:800;
+}
+.drinkMenu li{
+    height:35px;
+    width:150px;
+    border-bottom:3px solid #ffe;
+    curdor:pointer;
+}
+#eventWrap{
+    padding-left:50px;
+    height:350px;
+    font-size:20px;
+    font-weight:800;
+}
