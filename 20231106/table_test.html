@@ -5,8 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>테이블실습final</title>
-</head>
+    <link rel="stylesheet" href="./static/css/table.css">
+</head> 
 <body>
-    
+    <table id="wrap">
+        <tr>
+            <td id="header" cplspan="2">
+                <table>
+                    <tr id="login">
+                        <td class="loginMenu">로그인</td>
+                        <td class="loginMenu">회원가입</td>
+                        <td class="loginMenu">고객센터</td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+        <tr>
+            <td id="menu" colspan="2">
+                <table>
+                    <tr>
+                        <td class="enterMenu">콘테스트</td>
+                        <td class="entermenu">같이하기</td>
+                        <td class="enterMenu">대회일정</td>
+                        <td class="enterMenu">자유게시판</td>
+                        <td class="enterMenu">공지사항</td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+        <tr>
+            <td id="date">
+                <h3>대회일정</h3><br>
+                <ul>
+                    <li>UI(11월 20일)</li>
+                    <li>데이터시각화(11월 28일)</li>
+                    <li>앱 콘테스트(12월 2일)</li>
+                </ul>
+            </td>
+            <td id="image">
+                <img src="./static/image/uiimage.jfif" alt="ui이미지">
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

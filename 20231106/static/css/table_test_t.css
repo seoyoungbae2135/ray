@@ -1,0 +1,18 @@
+/*    */
+body{
+    margin:0;
+}
+#wrap{
+    border-collapse:collapse;
+    width:1000px;
+}
+#wrap tr td{ 
+    border:1px solid #000; /* table의 외곽선 지정 */
+}
+#top{
+    width:100%;
+}
+#top table{
+    float:right; /* 테이블내의 모든것을 우측으로 정렬, 요즘은 flex,  grid 사용
+                    float는 상위태그의영향을 받지않는다. */
+}

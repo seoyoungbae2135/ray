@@ -1,0 +1,30 @@
+/* table_test.css */
+body{
+    background-color:aqua;
+    margin:0;
+}
+#wrap{
+    width:1200px;
+    border-collapse:collapse;
+    margin:20px auto;
+}
+#wrap tr td{
+    border:1px solid #000;
+}
+#header{
+    width:100%;
+    height:20px;
+    background-color:#aaa;
+}
+
+#menu{
+    width:100%;
+    height:40px;
+}
+#date{
+    width:300px;
+    height:600px;
+}
+#image{
+    width:900px;
+}
