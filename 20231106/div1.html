@@ -13,21 +13,87 @@
             border:1px solid red;
             background-color:seagreen;
             border-radius:20px;
-            padding:20px 100px; /* 내부 여백 */
+            padding:20px 100px; /* 내부 여백 상하, 좌우*/
             margin-top:100px; /* 상단 바깥쪽 여백 */
+        }
+        #box2{
+            width:200px;
+            height:100px;
+            background-color:magenta;
+            margin-top:-220px;
+            margin-left:200px;
+            
+        }
+        #box3{
+            box-sizing:border-box; /* padding값, 테두리선을 주어도 크기가 변하지않도록하는 태그 */
+            width:500px;
+            /* height:400px; 높이값을 주지않아도 padding값에 의해 높이가 정해진다. */
+            background-color:tomato;
+            padding:150px 175px;
+            border:1px solid #000;
+        }
+        #box4{
+            width:150px;
+            height:100px;
+            background-color:papayawhip;
+            
+        }
+        #box5{
+            width:600px;
+            /* height:50px; */
+            background-color:yellow;
+            text-align:center; /* 수평정렬 */
+            box-sizing:border-box;
+            padding:20px 0;
+        }
+        #box6{
+            width:500px;
+            background-color:pink;
+            text-align:right;
+            padding-right:10px;
+            box-sizing:border-box;
         }
     </style>
 </head>
 <body>
 
-    <div id="box1">
+    <div id="box1"> 
 
     </div>
+    <div id="box2">
+
+    </div>
+    <div id="box3">
+        <div id="box4"></div>
+    </div>
+
+    <br><br>
+    <div id="box5">
+        입양 가능! 새로운 가족을 기다리고 있어요
+    </div>
+
+    <div id="box6">
+        반려동물 사랑으로 입양하세요
+    </div>
     
+
+
     <!--
         태그에 적용 할 수 있는 여백
         안쪽여백 - padding
         바깥쪽 여백 - margin
+
+        padding은 안쪽여백을 생성한다.
+        padding으로 생셩된 공간은 내부에서 사용이 불가하다.(택스트, 이미지 등등)
+        div 영역안에 특정태그의 위치를 이동시키고 다른공간에 택스트나 이미지를
+        표현하고자 한다면 margin으로 이동시켜야한다.
+        padding은 안쪽에 사용할 수 없는 공간을  생성하는 것이다.
+        margin은 기본적으로 사용할 수 없는 바깥쪽에 공간을 생성하는 것이기 때문에
+        div영역내부에 표시되는 내용에는 영향을 주지 않는다.
+        
+        하여 영역 안쪽의 태그들의 위치를 설정하기위해서는 padding을,
+        영역의 화면에서 위치를 설정하기위해 margin을 이용한다.
+
         div - division
         div 태그를 이용하여 화면을 분할해서 사용할 수 있다.
         메뉴영역, 사이드영역, 본문영역, 바닥영역 등등
@@ -37,7 +103,7 @@
 
         공간(영역) 태그
         p, h123456, div, iframe, 
-        header - 메뉴, 로고, 재목, 머리글 
+        header - 메뉴, 로고, 제목, 머리글 
         main - 페이지내의 중심주제, 주요내용, 콘텐츠 
         section - 주제별, 카테고리별, 테마별
         article - 기사, 블로그전체내용, 택스트 중심의글

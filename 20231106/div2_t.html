@@ -1,0 +1,39 @@
+<!-- div2_t-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width:500px;
+            height:350px;
+            background-color:paleturquoise;
+            padding-top:1px; /* padding-top:1px을 설정해야 하부div에서 margin-top 설정시 전체가
+                                내려가지않고 하부div만 상단여백이 적용된다. */
+        }
+        #div1Child1{
+            width:100px;
+            height:100px;
+            background-color:red;
+            margin-left:250px;  
+            margin-top:200px; 
+        }
+        #div1Child2{
+            width:100px;
+            height:100px;
+            background-color:blue;
+            margin-left:100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        <div id="div1Child1">child1</div>
+        <div id="div1Child2">child2</div>
+    </div>
+
+</body>
+</html>
