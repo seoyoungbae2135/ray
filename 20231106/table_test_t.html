@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./static/css/table_test_t.css">
 </head>
@@ -22,12 +22,33 @@
             
         </tr>
         <tr>
-            <td colspan="2" id="header"></td>
+            <td colspan="2" id="header">
+                <table>
+                    <tr>
+                        <td>콘테스트</td>
+                        <td>같이하기</td>
+                        <td>대회일정</td>
+                        <td>자유게시판</td>
+                        <td>공지사항</td>
+                    </tr>
+                </table>
+            </td>
             
         </tr>
         <tr>
-            <td id="side"></td>
-            <td id="mainImg"></td>
+            <td id="side">
+                <p> <!-- 한칸내의 택스트는 묶어서 표현하는것이 위치이동등 변경이 용이-->
+                    <h3>대회일정</h3>
+                    <ul>
+                        <li>UI(11월 20일)</li>
+                        <li>데이터 시각화(11월 28일)</li>
+                        <li>앱 콘테스트(12월 2일)</li>
+                    </ul>
+                </p>
+            </td>
+            <td id="mainImg">
+                <img src="./static/image/uiimage.jfif" alt="메인이미지">
+            </td>
         </tr>
     </table>
 </body>

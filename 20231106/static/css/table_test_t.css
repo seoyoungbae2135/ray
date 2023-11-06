@@ -16,3 +16,21 @@ body{
     float:right; /* 테이블내의 모든것을 우측으로 정렬, 요즘은 flex,  grid 사용
                     float는 상위태그의영향을 받지않는다. */
 }
+#header table{
+    width:600px;
+    margin:0 auto;
+    /* 태그의 위치를 해당 공간에서 가운데 위치하려면
+    margin을 이용하여 왼쪽오른쪽 여백을 똑같이 설정되도록 
+    auto를 준다.
+       margin:0 auto;는 margin:위아래여백 왼쪽오른쪽여백; 의 의미,
+    margin:0 auto; 만 설정한다고 해서 가운데로 위치하지않는다.
+    width를 필히 설정해야한다. */
+}
+#header table tr td{border:0;}
+#side{
+    width:300px;
+    height:400px;
+}
+#mainImg{
+    width:700px;
+}
