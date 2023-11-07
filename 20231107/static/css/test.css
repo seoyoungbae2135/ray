@@ -1,0 +1,31 @@
+#out{
+    width:800px;
+    height:250px;
+    background-color:yellow;
+    box-sizing:border-box; /* 우측으로이동 2번째방법 */
+    padding-left:600px;
+}
+#in{
+    width:200px;
+    height:50px;
+    background-color:gray;
+    /* margin-left:600px; 우측으로이동 1번째방법 */
+}
+
+#master{
+    width:400px;
+    background-color:lightblue;
+    text-align:center;
+    padding:50px 0;
+}
+
+#animal{
+    background-color:forestgreen;
+    width:1000px;
+    padding:150px 0 30px 10px; /* 시계방향으로 위 오른쪽 아래 왼쪽 순서로 적용 */
+    /* 
+    padding:위아래 왼쪽오른쪽
+    padding:위아래왼쪽오른쪽
+    padding:위 오른쪽 아래 왼쪽
+     */
+}

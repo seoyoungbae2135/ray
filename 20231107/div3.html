@@ -1,0 +1,84 @@
+<!-- div3.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div3</title>
+
+    <style>
+        #box1{
+            width:500px;
+            height:500px;
+            background-color:pink;
+            margin-top:100px;
+            position:relative;
+        }
+        #child1{
+            width:100px;
+            height:150px;
+            background-color:green;
+            position:absolute;
+            left:150px;
+            top:0;
+        }
+        #child2{
+            width:100px;
+            height:50px;
+            background-color:brown;
+            position:relative;
+            top:150px;
+            left:50px;
+        }
+        #topButton{
+            position:fixed;
+            right:100px;
+            top:100px;
+        }
+        #menu{
+            position:sticky;
+            top:50px;
+            z-index:100; /* z-index는 z축의 위치를 의미한다. z-index: index;숫자
+                             크기가 앞으로 표현 되는 순서이다 */
+        }
+    </style>
+</head>
+<body> <!-- 웹에서 기본 여백이 있다 -->
+    <div id="menu">홈 지상최대 공모전 시리즈 에디션</div>
+
+    <div id="box1">
+        <div id="child1"></div>
+        <div id="child2"></div>
+        <div id="topButton">top</div>
+        
+    </div>
+    
+    <div style="height:800px"></div>
+
+
+    <!-- css - position
+    position : 위치, 페이지에서 해당 태그를 배치하는 방법
+    position 값
+        - posistion:static; 기본적으로 태그가 가지고 있는 값.
+        - position:relative; 자신이 처음 생성된 위치를 기준으로
+                            top, right, left, bottom방향으로 이동이 가능하다.
+                            기준점에서 어디든 이동이 가능하다.
+                            relative일때 기준점을 중심으로 이동이 되기때문에 
+                            right, bottom 사용시 주의해야한다.
+                            ㅣ기준점에서 right, bottom이 적용된다.
+        - position:absolute; 상위태그를 기준으로 이동.
+                            상위태그들중에 position(static제외) 값을 가진
+                            태그가 기준이 된다.
+                            다른태그에 순서와 위치의 영향을 주지않는다.
+                            right 적용시 상위태그 오른쪽끝을 기준으로 이동한다.
+        - position:fixed; absolute처럼 순서에서 제외되고 absolute와는 다르게 상위태그에
+                            귀속되지 않는다. 브라우저 화면에 귀속된다.
+        - position:sticky; 태그의 기본순서는 유지하면서
+                            화면 스크롤동작에는 가장가까운 상위태그에 귀속된다.
+                            스크롤이 sticky 태그위치와 달라지면 fixed처럼 
+                            화면에 고정된다.
+    -->
+
+
+</body>
+</html>
