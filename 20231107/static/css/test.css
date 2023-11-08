@@ -2,7 +2,7 @@
     width:800px;
     height:250px;
     background-color:yellow;
-    box-sizing:border-box; /* 우측으로이동 2번째방법 */
+    box-sizing:border-box; /* 우측으로이동 2번째방법 box크기고정 후 padding-left를 준다 */
     padding-left:600px;
 }
 #in{
