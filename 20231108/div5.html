@@ -1,0 +1,66 @@
+<!-- div5.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #menuWrap{
+            width:800px;
+            margin:0 auto; /* 태그의 위치를 브라우저 가운데 표시하려면 너비와
+                                margin:0 auto;값을 부여해야 한다. */
+            background-color:#222845;
+            color:#eaeaea;
+            
+        }
+        .menu{
+            display:inline-block;
+            padding:15px 30px;
+            
+        }
+        .menu:hover{ /* class=menu에 hover가 적용되면 */
+            background-color:#eaeaea; /* 백그라운드컬러는 #eaeaea로 바뀌고 */
+            color:#222845; /* 글자색은 #222845로 바뀌고 */
+            cursor:pointer;  /* 커서는 포인터로 바뀐다 */
+        }
+        .sub{
+            display:none; /* class=sub가 보이지 않도록 설정 */
+        }
+        .menu:hover .sub{ /* .menu .sub = 하위태그를 의미. 필히 스페이스적용  class=menu의 하위태그 sub에 hover가 적용되면 */
+            display:block; /* class=sub가 보이도록 설정 */
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="menuWrap">
+        <div class="menu">
+            HOME
+        </div>
+        <div class="menu">
+            자동차
+            <div class="sub">
+                <div class="subMenu">시승신청</div>
+                <div class="subMenu">판매순위</div>
+            </div>
+        </div>
+        <div class="menu">
+            증권
+        </div>
+        <div class="menu">
+            영화
+        </div>
+        <div class="menu">
+            웹툰
+        </div>
+    </div>
+</body>
+</html>
+<!-- 서버: 서비를 제공하기 ㅜ이한 운영체제가 설치된 ㅓㅁ퓨터 
+            웹서비스를 제공하는 컴퓨터를 웹서버라고한다.
+        서버가 서비스를 제공하려면 주소와 port가 필요하다.
+        백엔드 - 자바, 서버컴퓨터에서 동작하는 프로그램 개발.
+        프론트엔드 - 클라이언트 컴퓨터에서 동작하는 프로그램 개발.     
+-->

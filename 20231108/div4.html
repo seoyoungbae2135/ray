@@ -34,10 +34,12 @@
             list-style-type:none;
             margin:0;
             padding:0;
+            /* height:50px; */
+            display:flex;
         }
         .menuList li{
             /* display:inline; */ 
-            float:left;
+            /* float:left; */
             padding:15px 20px;
         }
 
@@ -69,7 +71,12 @@
 
 
 
-    <!-- display: block; 가로방향으로 브라우저 전체를 영역으로 표시하는 방법
+    <!--
+        float - 정렬, 배치 html태그의 순서에서 제외된다. 위의경우 <ul>태그에서 제외되므로
+                <ul>태그가 <li>태그에 가려지게된다.
+                <ul>태그(상위태그)에 높이를 지정해야 <ul>태그가 보이게된다.
+                그래서 <ul>태그(상위태그)에 display:plex를 사용하여 수평정렬한다.
+        display: block; 가로방향으로 브라우저 전체를 영역으로 표시하는 방법
                          display block을 가진 해당 태그 앞뒤로 줄바꿈(엔터)
                          을 생성.
         display: inline; 태그의 앞뒤로 줄바꿈을 생성하지 않는다.
