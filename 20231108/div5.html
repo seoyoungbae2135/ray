@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <style>
+
         #menuWrap{
             width:800px;
             margin:0 auto; /* 태그의 위치를 브라우저 가운데 표시하려면 너비와
@@ -18,6 +19,7 @@
         .menu{
             display:inline-block;
             padding:15px 30px;
+            position:relative; /* class=sub가 class=menu에 귀속되도록 설정 */
             
         }
         .menu:hover{ /* class=menu에 hover가 적용되면 */
@@ -27,13 +29,103 @@
         }
         .sub{
             display:none; /* class=sub가 보이지 않도록 설정 */
+            position:absolute; /* class=sub에 의해 상위태그가 영향을 받지 않도록 설정 */
+            top:51px;
+            left:0;
+            background:#536209;
+            color:#eee;
+            width:100%;
+            text-align:center;
+            line-height:30px;
+            
         }
         .menu:hover .sub{ /* .menu .sub = 하위태그를 의미. 필히 스페이스적용  class=menu의 하위태그 sub에 hover가 적용되면 */
             display:block; /* class=sub가 보이도록 설정 */
         }
+
+        #main{
+            width:1000px;
+            margin:0 auto; /* 브라우저 중앙에 오도록 설정 */
+        }
+        .image{
+            width:400px;
+            /* margin:0 auto; /* 중앙에 위치하도록 설정 display:block일 경우에만 적용됨 */
+            position:relative; /* transition효과를 주기위하여 위치설정 */
+            right:0;
+            top:0;
+            display:inline-block; /* 그림 우측으로 글자가 들어올 수 있도록 설정 */
+            transition-property: width, right, top; /* 그림의 변화가 설정된 시간동안 진행 */
+            transition-duration: 1s , 1s,1s;
+        }
+        .image img{
+            width:100%;
+        }
+        .imgBox{
+            text-align:center;
+            height:300px;
+            margin-bottom:100px;
+            margin-top:100px;
+        }
+        .imgBox:hover .image{  /* 이미지에 마우스를 커서를 가져가면 */
+            width:200px;       /* 이미지 크기가 작아진다 */
+            /*position:relative; /* 크기가 작아진 이미지의 위치를 설정, absolute로 하면 순서에서 제외된다
+              이미지에 transition효과를 주기위하여 class=image로 이동 */
+            
+            right:150px;
+            top:75px;
+        }
+        .detail{
+            display:none; /* 디폴트에서는 보이지 않도록 설정 */
+        }
+        .imgBox:hover .detail{ /* 마우스커서를 이미지에 가져가면 디테일 div의 */
+            display:inline-block;  /* 글자가 나타난다 속성은 display:inline-block 으로해야 그림과 겹치지않는다 */
+        }
     </style>
 </head>
 <body>
+
+    <div id="main">  
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/moon" alt="뷰티"> 
+            </div>
+            <div class="detail">
+                차원이 다른 영상<br>
+                달을 여러각도에서 감상<br>
+                같이감상.
+            </div>
+        </div>
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/perfume" alt="뷰티2">
+            </div>
+            <div class="detail">
+                차원이 다른 영상<br>
+                달을 여러각도에서 감상<br>
+                같이감상.
+            </div>  
+        </div>
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/picture" alt="뷰티3">
+            </div>
+            <div class="detail">
+                차원이 다른 영상<br>
+                달을 여러각도에서 감상<br>
+                같이감상.
+            </div>
+        </div>
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/bear" alt="뷰티4">
+            </div>
+            <div class="detail">
+                차원이 다른 영상<br>
+                달을 여러각도에서 감상<br>
+                같이감상.
+            </div>
+        </div>
+    </div>
     
     <div id="menuWrap">
         <div class="menu">
@@ -48,6 +140,11 @@
         </div>
         <div class="menu">
             증권
+            <div class="sub">
+                <div class="subMenu">주요주식</div>
+                <div class="subMenu">국내주식</div>
+                <div class="subMenu">해외주식</div>
+            </div>
         </div>
         <div class="menu">
             영화
@@ -58,7 +155,7 @@
     </div>
 </body>
 </html>
-<!-- 서버: 서비를 제공하기 ㅜ이한 운영체제가 설치된 ㅓㅁ퓨터 
+<!-- 서버: 서비스를 제공하기 위한 운영체제가 설치된 컴퓨터 
             웹서비스를 제공하는 컴퓨터를 웹서버라고한다.
         서버가 서비스를 제공하려면 주소와 port가 필요하다.
         백엔드 - 자바, 서버컴퓨터에서 동작하는 프로그램 개발.
