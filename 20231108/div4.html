@@ -10,7 +10,8 @@
         #box1{
             background-color:pink;
             width:500px;
-            height:50px;
+            /* height:50px; */
+            padding:15px 0;
             /* display:inline; */ 
         }
         #bold{
@@ -21,17 +22,53 @@
             /*display:inline-block;*/
             display:none;
         }
+        .menu{
+            padding:0 20px;
+        }
+        #box2{
+            width:800px;
+            background-color:aquamarine;
+            color:red;
+        }
+        .menuList{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+        }
+        .menuList li{
+            /* display:inline; */ 
+            float:left;
+            padding:15px 20px;
+        }
+
     </style>
 
 </head>
 <body>
     
     <div id="box1">
-
+        <span class="menu">HOME</span>
+        <span class="menu">자동차</span>
+        <span class="menu">스포츠</span>
+        <span class="menu">영화</span>
+        <span class="menu">웹툰</span>
     </div>
     <h3>나는 헤드라인</h3>
     <b id="bold">굵은글씨</b>
     <i>테스트</i>
+
+    <div id="box2">
+        <ul class="menuList">
+            <li>HOME</li>
+            <li>자동차</li>
+            <li>스포츠</li>
+            <li>영화</li>
+            <li>웹툰</li>
+        </ul>
+    </div>
+
+
+
     <!-- display: block; 가로방향으로 브라우저 전체를 영역으로 표시하는 방법
                          display block을 가진 해당 태그 앞뒤로 줄바꿈(엔터)
                          을 생성.
