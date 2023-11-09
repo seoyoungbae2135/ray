@@ -1,0 +1,110 @@
+/* default.css*/
+*{
+    margin:0;
+    padding:0;
+}
+#wrap{
+    width:1200px;
+    margin:0 auto;
+    background-color:aquamarine;
+}
+#header{
+    width:100%;
+    height:100px;
+    background-color:rgba(45, 170, 170, 0.884);
+    border-radius:10px;
+}
+
+.title{
+    text-align:center;
+    padding:20px;
+}
+.menuWrap{
+    text-align:right;
+    
+}
+.menu{
+    padding:30px;
+
+}
+#main{
+    width:100%;
+    height:800px;
+    background-color:blanchedalmond;
+    border-radius:10px;
+    position:relative;
+
+}
+.siteDetail{
+    width:100%;
+    height:450px;
+    margin-top:30px;
+}
+.siteDetail h2{
+    text-align:right;
+}
+.siteDetail h4{
+    width:380px;
+    margin-left:700px;
+    margin-top:30px;
+}
+.siteDetail img{
+    width:500px;
+    height:300px;
+    /* position:absolute; */
+}
+.siteUse{
+    width:100%;
+    height:300px;
+    margin-top:5px;
+}
+.button{
+    margin-left:100px;
+    margin-top:50px;
+}
+.freeSign{
+    width:100px; height:50px;
+    background-color:brown;
+    box-shadow: inset 0px 0px 2px 10px #740808;
+    margin-left:50px;
+    color:#fff;
+    text-align:center;
+    line-height:50px;
+}
+.devTool{
+    width:100px; height:50px;
+    background-color:brown;
+    box-shadow: inset 0px 0px 2px 10px #740808;
+    margin-left:200px;
+    margin-top:-50px;
+    color:#fff;
+    text-align:center;
+    line-height:50px;
+}
+.card{
+    width:500px;
+    height:200px;
+    margin-left:600px;
+    /* border:1px solid #000; */
+}
+.build{
+    width:250px;
+    height:200px;
+    text-align:center;
+}
+.build img{
+    height:100px;
+}
+.learn{
+    width:250px;
+    height:200px;
+    text-align:center;
+    margin-left:200px;
+    margin-top:-200px;
+    /* position:absolute; */
+}
+.learn img{
+    width:170px;
+    height:100px;
+}
+

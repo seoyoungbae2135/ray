@@ -1,0 +1,93 @@
+<!-- 그림자.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width:200px;
+            height:200px;
+            background-color:#a4a434;
+            box-shadow: 20px 20px 40px black; /* 값순서 : 좌우(음수-좌, 양수-우), 상하(음수-상, 양수-하), 그림자퍼짐정도 */
+        }
+        #box2{
+            width:200px; height:200px;
+            background-color: gray;
+            box-shadow: inset 0px 0px 2px 10px #555; /* inset은 그림자가 안으로 적용됨, 4번째값은 그림자의 크기 */
+        }
+        #box3{
+            width:200px;
+            margin-top:100px;
+            margin-bottom:100px;
+            box-shadow:3px 2px 4px gray;
+            border-radius: 10px; /* box3에 모서리를 라운드로 나타냄  */
+        }
+        .image{
+            width:100%; height:200px;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            overflow:hidden;
+            
+        }
+        .image img{ 
+            height:200px; /* 이미지를 정해진 크기안에 어느정도 나타나도록 폭이큰 이미지는 높이를 지정하고 높이가 큰 이미지는 폭을 지정한다. */
+            transform: scale(1); /* 초기상태의 이미지 크기 설정 */
+            transition:transform 1s ease; /* transition을 적용할 대상(transform) 과 transition시간, transition속성을 지정 */
+        } 
+        .image:hover img{
+            transform: scale(1.2); /* 변화 후의 이미지 크기 설정 */
+        }
+        .detail{
+            border-top:3.5px solid rgb(6, 5, 75);
+            text-align: center;
+            padding:15px 0; 
+            position:relative;
+        }
+        .cap{
+            position:absolute;
+            width:80px;
+            background-color:rgb(6, 5, 75);
+            line-height:30px;
+            border-radius:15px;
+            color:#fff;
+            left:60px;
+            top:-16.75px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box1">
+
+    </div>
+    <div id="box2"></div>
+    <div id="box3">
+        <div class="image">
+            <img src="./static/image/for.jpg" alt="풍경">
+        </div>
+        <div class="detail">
+            <div class="cap">풍경</div>
+            해뜨는 호수
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!--
+    transform : 텍스트, 이미지, 도형,영상, 등에 변화를 주기위한 속성
+                기울기(matirx), 크기(scale), 회전(rotate), 이동(translate) 효과를 부여 할 수 있다.
+    transition 사용할때 반드시 처음사용값과 변화된 마지막값을 알려줘야 한다.
+                박스의너비가 변하는 과정을 transition으로 표현한다면
+                처음 너비가 얼마인지 값이 있어야 하고, 변경된 너비값도 잆어야 한다.
+    transition ; 상태의변화를 동적으로 표현
+                지정한 시간에 맞춰 변화되는 과정을 표현.
+    transition-delay 시간설정 초단위(s), transition 효과가 시작하기전에 대기 시간
+    transition-duration 시간 설정 초단위(s) trandition 효과가 진행되는 시간
+    transition-property 변화되는 css속성 지정(예, width, height, left.top,background 등)
+                        모든css 속성 지정은 all 이다.
+    transition-timing-function transition 효과가 속도 설정
+                                ease,ease-in, ease-out, ease-in-out, linear, step-end
+-->

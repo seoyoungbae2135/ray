@@ -1,0 +1,53 @@
+<!-- main.html  텍스트가 지정된 영역보다 긴경우 줄임표시... 와 여러줄에서 줄임표시, 스크롤박스 생성등 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #testBox1{
+            width:300px;
+            height:100px;
+            overflow: hidden; /* 여러줄을 줄임... 표시할때 overflow: hidden으로 설정*/ 
+            /* overflow: auto; /* 영역을 벗어난 부분의 제어 hidden:보이지않도록 csroll;영역외의부분 스크롤 되도록
+                               auto; 영역을 벗어난 부분이 생기면 자동으로 스크롤됨*/
+            border:1px solid black; /* 스크롤박스에 외곽선이 생긴다. */
+            padding:10px; /* 스크롤박스 내부에 여백 생성 */
+            text-overflow: ellipsis; /* 여러줄을 줄임... 표시할때 사용 */
+            -webkit-line-clamp:5; /* 여러줄을 줄임... 표시할때 나타낼 줄수를 지정 */
+            word-wrap: break-word; /* 지정된 크기에서 줄바꿈 허용, 여러줄을 줄임... 표시할때 사용 */
+            display: -webkit-box; /* 여러줄을 줄임... 표시할때 사용 */
+            -webkit-box-orient: vertical; /* 여러줄을 줄임... 표시할때 사용. -webkit은 애플에서 개발한 모양을 꾸미고자하는 엔진 */
+        }
+        #ellipse{
+            width:50px;
+            overflow: hidden; /* 영역을 벗어난 부분은 감춘다 */
+            text-overflow: ellipsis; /* 영역을 벗어난 텍스트를 ...으로 표시 */
+            white-space: nowrap; /* 영역이 작아도 줄바꿈이 되지않는다  */
+        }
+    </style>
+</head>
+<body>
+
+    <p id="ellipse">
+        성산포에서는 술은 내가 마시는데 취하기는 바다가 취한다.
+    </p>
+    
+    <div id="testBox1">
+        한잔의 술을 마시고 
+        우리는 버지니아 울프의 생애와 
+        목마를타고 떠난 숙녀의 옷자락을 이야기한다
+        목마는 주인을 버리고 그저 방울소리만 울리며
+        가을속으로 떠났다. 술병에서 별이 떨어진다 
+        상심한 별은 내가슴에 가벼웁게 부서진다.
+        등대에 불이보이지않아도, 그저간직한 패시미즘의 미래를 위하여
+        우리는 눈을뜨고 한잔의 술을 마셔야 한다.
+    </div>
+
+</body>
+</html>
+
+<!-- white-space : normal - 기본값 (너비에 맞춰서 자동 줄바꿈)
+     white-nowrap - 줄바꿈을 적용하지 않는다.  
+-->
