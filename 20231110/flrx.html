@@ -1,0 +1,141 @@
+<!-- flex.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item:nth-child(1){background:yellow; /*width:30%;*/ }
+        .item:nth-child(2){background:red; }
+        .item:nth-child(3){background:blue; }
+        .item:nth-child(4){background:pink; }
+        .item:nth-child(5){background:orange; }
+        .item:nth-child(6){background:green; }
+
+        #container1{ /* 배열을 가로로만 할 수 있다 */
+            border:3px solid black;
+            display:flex;
+            width:300px;
+            height:100px;
+            justify-content: space-between;     /* 주축 위치지정, 주축의 시작은 좌측 끝,  */
+            align-items: stretch;        /* 교차축 위치 지정 교차축의 시작은 상단, stretch - 교차축 전체를 차지  */
+        }
+        #container1 .item{
+            width:30%;
+        }
+        #container2{ /* 배열을 세로로만 할 수 있다 */
+            width:300px;
+            height:100px;
+            border:2px solid black;
+            display:flex;
+            flex-direction: column; /* 주축과 교차축이 바뀐다.  row-reverse; flex 주축의 시작점을 우측으로 변경 */
+            justify-content: space-around; /* 주축 위치지정*/
+            align-items: center; /*교차축 위치지정 */
+        }
+        .a{
+            align-self: end; /* item 각각의 위치를 설정 */
+        }
+        .b{
+            align-self: start; /* item 각각의 위치를 설정 */
+        }
+        #container3{
+            border:2px solid black;
+            width:400px;
+            /* height:100px; 높이를 주어서 아이템이 2줄로 표현되면 교차축이 2개가 된다 */
+            display:flex;
+            flex-wrap: wrap; /* 디폴트는 nowarp, wrap으로 설정시 2줄로 나타나게 된다.(아이템의 크기에 따라 여러줄을 만들 수 있다) */
+            justify-content: center;
+            align-items: center;
+            row-gap:20px; /* 줄과줄 간격 */
+            column-gap:20px; /* 칸과칸 간격 */
+            padding:20px;
+        }
+        #container4{
+            box-sizing: border-box; /* padding에 의한 변형을 방지하기위하여 삽입 */
+            border:2px solid black;
+            width:500px;
+            height:130px;
+            display:flex; 
+            flex-wrap: wrap; /* 2줄로 표기하기위하여 삽입 */
+            flex-direction: column; /* 주축을 세로방향 으로하여   */
+            /* row-gap: 10px; */
+            justify-content: space-between;
+            column-gap: 10px;
+            padding:10px
+        }
+        #container4 .item{ height:30px;}
+
+    </style>
+</head>
+<body>
+    
+    <div id="container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <br><br>
+    <div id="container2">
+        <div class="item">1</div>
+        <div class="item a">2</div> <!-- class는 이름을 여러개 갖을 수 있다 -->
+        <div class="item b">3</div>
+    </div>
+    <br><br>
+    <div id="container3">
+        <div class="item">1</div>
+        <div class="item">2</div> 
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div> 
+        <div class="item">6</div>
+    </div>
+    <br><br>
+    <div id="container4">
+        <div class="item">1</div>
+        <div class="item">2</div> 
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div> 
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    display:flex; 
+     flex가 적용된 태그의 하위태그들을 어떻게 베치 할 것인가 설정 할 수 있다.
+     하위태그들을 크기를 키우거나 줄이거나 위치를 옮기거나 할 수 있다.
+     container : display:flex가 적용된 태그를 컨테이너라고 한다.
+     item : 컨테이너의 하위태그들을 플렉스 아이템 이라고 한다.
+     주축 : 아이템들이 배치되는 방향이 주축이다. 주축의방향으로 
+        아이템이 배치 정렬된다.
+     교차축 : 주축을 교차하는 축을 교차축이라고한다. 교차축으로 
+              아이템을 정렬시킬 수 있다. 
+     justify-content: 주축방향으로 설정하기위한 속성
+                      start; 주축의 시작부분에 배치.
+                      end; 주축의 끝에 배치
+
+                      center; 주축의 가운데 배치
+                      space-around; 양쪽끝에 조금 간격을 주고 item들 사이에 동일한 간격으로 배치
+                      psace-between; 양쪽끝에 첫번째 아이템과 마지막아이템을 배치하고 동일한 간격으로 배치
+                      space-evenly; 주축의 가운데를 중심으로 모든 아이템의 간격을 동일하게 배치
+
+     align-items: 교차축에 정렬 하기 위한 속성
+                  start; 교차축의 시작에 배치
+                  center; 교차축의 가운데 배치
+                  end; 교차축의 끝에 배치
+                  stretch; 교차축 전체 사용(교차축 크기만큼 채우기)
+
+     flex-direction: 축의방향전환
+                     row; 기본방향 (주축:가로, 교차축:세로)
+                     row-reverse; row의 역방향, 주축의 시작과끝이 반대로된다.
+                     column; 주축:세로, 교차축:가로
+                     column-reverse; column의 역방향 주축의 시작과 끝이 반대가 된다.
+
+     flex-wrap: 여러줄 또는 다중 열 사용가능.
+                nowrap; 기본설정 한줄 또는 한열만 가능
+                wrap; 다중줄, 다중열 가능
+                  
+
+-->
