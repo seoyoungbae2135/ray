@@ -1,0 +1,67 @@
+/* link index_t.html */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /* 전체에 박스고정 적용 */
+}
+#wrap{
+    width:100%;
+    background-color:#000;
+    color:#eee;
+    position:relative;
+    height:100vh;
+}
+#header{
+    width:200px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh; /* vh(브라우저의 높이를 사용하는 정도) 라는 단위와(%와 유사한 단위) vw 라는 단위가있다. */
+    background-color:#272732;
+}
+#nav{
+    width:100%;
+    padding:20px 7px;
+}
+.title{
+    text-align: center;
+}
+
+.menuWrap{
+    width:100%;
+    padding:30px 0;
+}
+.menu{
+    display:block; /* <span>태그의 display속성을 block으로 변경= 줄바꿈 적용 */
+    padding:10px 0;
+    cursor:pointer; /* cursor의 모양이 바뀌도록하는 속성 */
+}
+.menuWrap .menu:first-child{ /* 첫번째 menu 만 선택 */
+    text-align: center;
+    background: #000;
+    margin-bottom:15px;
+    border-radius:5px;
+    position:relative;
+    overflow: hidden;
+    padding:3px; /* menu에서 적용된 padding: */
+}
+.menuWrap .menu:first-child::before{ /* before:선택한 첫번째 menu의 앞부분을 선택(가상의 선택자), after:뒷부분 선택 */
+    content:""; /* 가상의 선택자에는 content를 꼭 적용 " " 사이에 적용할 것을 넣는다, 아무것도 넣지않으면 표현되지 않는다. */
+    background:linear-gradient(90deg, #ff0000, #ffbb00, #ffe400,
+    #47c83E, #0054ff, #003399, #8041d9); /* linear-gradient = 그라데이션을 색상지정하여 표현 */
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    
+}
+.menuWrap .menu:first-child span{
+    z-index: 100;  /* z-index는 position기본값인경우 적용되지 않는다 */
+    position:relative; /* x-index를 적용하기위하여 position:relative를 적용한다. */
+    background:#000;
+    display:block;
+    height:100%;
+    padding:10px 0;
+    border-radius:6px;
+}

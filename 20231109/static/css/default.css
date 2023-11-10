@@ -4,15 +4,14 @@
     padding:0;
 }
 #wrap{
-    width:1200px;
+    width:100%;
     margin:0 auto;
-    background-color:aquamarine;
+    background-color:blanchedalmond;
 }
 #header{
     width:100%;
     height:100px;
     background-color:rgba(45, 170, 170, 0.884);
-    border-radius:10px;
 }
 
 .title{
@@ -20,18 +19,21 @@
     padding:20px;
 }
 .menuWrap{
+    width:100%;
+    display:inline-block;
     text-align:right;
-    
+    background-color:aqua;
+    box-sizing:border
 }
 .menu{
-    padding:30px;
-
+    padding:0 30px;
+    /* margin-right:50px:*/
 }
+.menu:hover
 #main{
     width:100%;
     height:800px;
     background-color:blanchedalmond;
-    border-radius:10px;
     position:relative;
 
 }
@@ -39,19 +41,23 @@
     width:100%;
     height:450px;
     margin-top:30px;
+    position:relative;
 }
 .siteDetail h2{
     text-align:right;
 }
 .siteDetail h4{
-    width:380px;
-    margin-left:700px;
+    width:300px;
+    height:80px;
+    overflow: scroll;
+    border: 1px solid #000;
+    margin-left:1300px;
     margin-top:30px;
 }
 .siteDetail img{
-    width:500px;
-    height:300px;
-    /* position:absolute; */
+    height:630px;
+    position:absolute;
+    top:0;
 }
 .siteUse{
     width:100%;
@@ -59,8 +65,9 @@
     margin-top:5px;
 }
 .button{
-    margin-left:100px;
-    margin-top:50px;
+    /* display:inline-block; */
+    margin-left:1000px;
+    margin-top:-100px;
 }
 .freeSign{
     width:100px; height:50px;
@@ -83,8 +90,8 @@
 }
 .card{
     width:500px;
-    height:200px;
-    margin-left:600px;
+    margin-left:1300px;
+    margin-top:100px;
     /* border:1px solid #000; */
 }
 .build{
@@ -106,5 +113,10 @@
 .learn img{
     width:170px;
     height:100px;
+}
+#footer{
+    width:100%;
+    background-color:aqua;
+    padding:0 30px;
 }
 
