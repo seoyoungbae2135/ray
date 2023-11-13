@@ -103,12 +103,12 @@
        
         // prompt로 입력한 데이터는 문자열 데이터이다. 숫자를 입력해도 문자열이다.
         // 숫자로 변환가능한 문자열 데이터는 parseInt() 를 통해 변환이 된다.
-        var age = parseInt( prompt('만 나이를 입력하세요') );
+        // var age = parseInt( prompt('만 나이를 입력하세요') );
 
-        document.writeln(age);
-        document.writeln( age + 10 );
-        document.writeln("내나이는" + age + "살이다.");
-        document.write("태어난 년도는" + (2023 - age) + "년도이다. <br>");
+        // document.writeln(age);
+        // document.writeln( age + 10 );
+        // document.writeln("내나이는" + age + "살이다.");
+        // 3030document.write("태어난 년도는" + (2023 - age) + "년도이다. <br>");
 
         // 수학 계산식 모두 사용 가능 하다.
         // result = num1 * 10 + num2;
@@ -129,6 +129,20 @@
         // 화면출력결과 -> 빨간컵 : 15 , 파랑컵 : 35
         //                빨간컵 : 35 , 파랑컵 : 15
         // 힌트 : 변수의 재사용이 가능하다.
+
+        //    var width = parseInt( prompt ('사각형의 밑변(mm)을 입력하세요') );
+        //    var height = parseInt( prompt ('사각형의 높이(mm)를 입력하세요') );
+        //    document.write( " 사각형의 면적은" + (width * height) + "mm^2 입니다<br><br>" );
+
+            var 빨간컵=15;
+            var 파랑컵=35;
+            var 하얀컵=0;
+            document.write("빨간컵:" + 빨간컵 +",파랑컵 : "+ 파랑컵 +"<br>");
+            var 하얀컵=20
+            var 빨간컵=빨간컵+하얀컵
+            var 파랑컵=파랑컵-하얀컵
+            document.write("빨간컵:" + 빨간컵 +",파랑컵 : "+ 파랑컵);
+
 
     </script>
 </head>
