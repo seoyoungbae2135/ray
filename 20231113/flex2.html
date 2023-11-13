@@ -1,0 +1,106 @@
+<!--flex2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0; padding:0; box-sizing: border-box;
+        }
+        img{ width:100%;} /* 이미지 크기를 div 크기에 따라 자동 적용되도록  */
+        #wrap{
+            width:1000px;
+            margin:0 auto;
+            position:relative;
+        }
+        #header{
+            width:100%;
+            padding:15px 0;
+        }
+        .nav{
+            width:100%;
+            font-size:25px;
+            font-weight:800;
+            display:flex;
+            align-items: center;
+            justify-content: space-between; /* 로고와 ul태그에 간격을 주기위하여 적용 */
+        }
+        .logo{
+            width:80px;
+            /* display:flex;  로고를 수직방향 중앙에 오도록하는 1번째 방법
+            align-items: center; */
+        }
+        .logo img{ vertical-align: middle; } /* 로고를 수직방향 중앙에 오도록하는 2번째방법, div태그에서는 동작하지안는다, div하위 img에 적용해야한다. */ 
+        .menuList{
+            width: calc( 100% - 80px - 30px ); /* 로고와 ul태그에 간격을 주기위하여, nav전체너비 - 로고너비 - 로고와 메뉴간격 */
+            list-style:none;
+            display:flex;
+            justify-content: space-between;
+            /* align-items: center ; */
+        }
+        #main{
+            width:100%;
+            display:flex; /* 이미지와 notice div의 순서를 바꾸기 위하여 상위 div에 flex 적용(a) */
+            flex-direction: column;
+        }
+        .picBox{
+            display:flex; /* 자동으로 이미지 크기가 맞추어져 정해진 div안에 배치된다 */ 
+            flex-wrap:wrap; /* 이미지를 여러줄로 나누어 배치된다. */
+            justify-content: space-between; /* 이미지간 간격을 주기위하여 적용(2) */
+            row-gap:10px; /* 이미지간 줄간격 적용 */
+            order:2; /* picBox div와 notice div의 위치를 바꾸기 위하여 order 적용, order의 값이 작을수록 위에배치, order값이 없는 flexItem이 위에 배치된다.(b) */
+        }
+        .notice{
+            order:1; /* notice div를 picBox div 위에 배치하기 위하여 order:1적용(c) */
+        }
+        .pic{
+            width: calc( 100% / 3 - 10px ); /* 한줄에 표현할 이미지 수를 정하기 위하여 계산식 적용, 이미지간 간격을 주기위하여 -10px 적용(1) */
+            /* padding:10px; 이미지간 간격을 padding으로 하면 상위 div와 좌,우측 줄이 맞지않는다. */
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="wrap">
+        <header id="header">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="https://loremflickr.com/500/500?random=8" alt="logo">
+                </div>
+                <ul class="menuList">
+                    <li class="menu">쇼핑</li>
+                    <li class="menu">뉴스</li>
+                    <li class="menu">증권</li>
+                    <li class="menu">부동산</li>
+                    <li class="menu">스포츠</li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <div class="picBox">
+                <div class="pic"><img src="https://loremflickr.com/500/500?random=1" alt="이미지"></div>
+                <div class="pic"><img src="https://loremflickr.com/500/500?random=2" alt="이미지"></div>
+                <div class="pic"><img src="https://loremflickr.com/500/500?random=3" alt="이미지"></div>
+                <div class="pic"><img src="https://loremflickr.com/500/500?random=4" alt="이미지"></div>
+                <div class="pic"><img src="https://loremflickr.com/500/500?random=5" alt="이미지"></div>
+                <div class="pic"><img src="https://loremflickr.com/500/500?random=6" alt="이미지"></div>
+                <div class="pic"><img src="https://loremflickr.com/500/500?random=7" alt="이미지"></div>
+            </div>
+            <div class="notice">
+                현재 집에서 기르고 있는 모든 애완용 고양이는 아프리카 남유럽 인도에 
+                걸쳐 분포하는 리비아 고양이를 사육 순화 시킨것
+                약 5000년전 리비아산 야생고양이를 고대 이집트인들이 길들인 것.
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

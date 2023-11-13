@@ -1,0 +1,67 @@
+<!--javascript_시작.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript"> /* javacsript를 사용하기위하여 삽입 */
+        // 한줄주석
+        /* 
+            여러줄 주석
+            javascript를 배우고 사용하기위해서는 html, css 기초지식이 필요하다.
+            html - 화면표시
+            css - html 태그의 모양, 애니메이션 효과
+            javascript - 웹페이지의 복잡한 기능 구현, 지도, 애니메이션, 2D/3D 등등
+                         동적인 이미지로 만들 수 있다.
+            html태그 - 요소, element 로 부른다.
+            데이터 - 숫자데이터, 문자데이터(특수문자포함)
+            문자열 - 글자조각, 단어 또는 문장, 단락 등
+            
+            javascript 이것만은 꼭 !!
+            변수, 데이터 종류, 제어문(조건문, 반복문), 함수 이 네가지를 잘 다루어야 한다.
+            
+            변수 -데이터를 저장하기위한 메모리 공간
+            컴퓨터에서 데이터가 사용되기위해서는 저장(기억)이 되어야 한다.
+                데이터를 저장하기위한 첫번째 저장공간은 변수이다.
+                데이터에는 숫자(정수, 실수) 데이터 문자가 있다.
+            
+        */
+       // javascript 변수 생성 방법
+       // 변수의 이름 정하기!! - 
+       // 숫자 데이터 저장하기위한 변수 
+       num = 10;
+       // = 뜻 : 대입연산자, 오른쪽의 데이터를 왼쪽에 저장
+       age = 20;
+
+       // 브라우저에 데이터 출력하는 방법 1.
+       // html문서에 데이터 출력하기
+       document.write( num / age );
+
+       // 변수에 저장하지 않고 사용한 데이터는 한번만 사용가능하다. 
+       // 변수를 만들어 사용하는 이유는 해당데이터를 재사용, 변경, 계산 하기 위함이다
+       // 변수에 저장한 데이터를 다른 데이터로 변경 가능하다.
+
+       num = 30;
+       num = num+1;
+
+       num = 1;
+       num = num + 2;
+       num = num + 3;
+       // 사용자가 입력한 데이터를 사용하려면 변수가 필요하다.
+       // 변수에 사용자가입력한 데이터, 페이지가 동작하기 위해 필요한 데이터,
+       //       html태그(요소, element), css에 사용할 크기,색상 등등을 저장한다.
+       // 입력한 데이터 저장하는 방법 1.
+       name = prompt();
+       document.write( name + "<br>");
+       // 문자열 - javascript에서사용하는 모든 글자데이터 들은 문자열이다. 
+       document.write( name );
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
