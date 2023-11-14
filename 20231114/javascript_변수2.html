@@ -50,17 +50,96 @@
         // document.write("평균점수 : " + avr);
 
         // teacher
-        var kor = parseInt(prompt("국어점수"));
-        var mat = parseInt(prompt("수학점수"));
-        var his = parseInt(prompt("역사점수"));
+        // var kor = parseInt(prompt("국어점수"));
+        // var mat = parseInt(prompt("수학점수"));
+        // var his = parseInt(prompt("역사점수"));
 
-        var total = kor + mat + his;
-        var avg = parseInt(total/3);
-        document.write("총점 : " + total + "점, 평균 : " + avg +"점<br>");
+        // var total = kor + mat + his;
+        // var avg = parseInt(total/3);
+        // document.write("총점 : " + total + "점, 평균 : " + avg +"점<br>");
+
+        // 연산자 
+        // 대입연산자 : =, 오른쪽의 데이터를 왼쪽에 저장
+        // 사칙연산자 : +, -, *, /, %, **
+        // var num1 = 24;
+        // var num2 =  7;
+        // document.write( "+연산자 :" + (num1+num2));
+        // document.write( "<br>-연산자 :" + (num1-num2));
+        // document.write( "<br>*연산자 :" + (num1*num2));
+        // document.write( "<br>/연산자 :" + (num1/num2));
+        // document.write("<br> %연산자 : " + (num1%num2)); // %도 나누기 이지만 결과가 다르다. 나머지값을 출력.
+        // document.write("<br> **연산자 :"+ (2**4)); // 2^4를 출력
+
+        // 복합대입연산자 : 대입연산자와 사칙연산자를 같이 사용. +=, -=,*=, /=, %=
+        //var a = 10;
+        //a += 5;  // a = a + 5; 와 동일한 결과
+        // 증감연산자 : ++, --  1씩 증가, 1씩 감소
+        //var num1=20;
+        //num1++;  // num1 이 1 증가하여 저장
+        //console.log(num1);  // consol.log(num1++)의 경우 증감연산자가 후순위가 되어 증가되지않은상태로 출력
+                            // consol.log(++num1)로 하면 증가되어 출력
+        //num1--;
+        //console.log(num1);  // consol.log는 f12의 콘솔박스에 결과값 출력
+
+        // 비교연산자 : >, <, >=, <=, ==, ===, !=
+        // 비교를 하기위한 연산자, 비교연산자의 결과값은 참 또는 거짓
+        // console.log("> :" +(10>5) );
+        // console.log("< :" +(11<7) );
+        // console.log(" >= :" +( 20>=20) );
+        // console.log("<= :" +(24<=30));
+        // console.log("== :" +(45==3));
+        // console.log("2. == :" + ( 45=="45")); // == 는 "같다" 데이터 종류를 구분하지 않는다.
+        // console.log("3.=== :" + (45==="45")); // === 도 "같다" 데이터 종류를 구분한다.
+        // console.log("같지않다 != ;" +(30!=20)); // != 같지않다.
+
+        // 조건연산자 (삼항연산자)
+        // (조건식) ? 조건식이 참일경우 실행할 내용 : 조건식이 거짓일 경우 실행할 내용 ;
+        
+        //(10 > 5) ? console.log("10이5보다 크다") : console.log("10이5보다 작다");
+
+        // T 익스프레스 탑승 가능 키가 130 이상 이다.
+        //var tall= parseInt( prompt("당신의 키는?"));
+        //( tall>=130 ) ? console.log("탑승가능") : console.log("탑승 불가");
+        //var result = (tall>=130) ? "탑승가능" : "탑승불가";
+        //console.log(result);
+
+        // 10과 8을 비교하여 두 수 중에서 큰 수를 출력하시오
+        var result = (10>8) ? 10 : 8;
+        console.log("두수중 큰수는 :"+result);
+        // 가장큰 수를 출력
+        //var num1= parseInt(prompt("첫번째 정수 입력"));
+        //var num2= parseInt(prompt("두번째 정수 입력"));
+        //var big=(num1>num2) ? num1 : num2;
+        //console.log("두수중 큰수 :"+big);
+
+        // 두개의 정수를 입력받고, 두수 중에서 가장 작은 수를 입력하시오.
+        // me
+        // var num1= parseInt(prompt('첫번째정수 입력'));
+        // var num2= parseInt(prompt("두번째정수 입력"));
+        // var small=(num1<num2) ? num1 : num2;
+        // console.log("두수중 작은 수:" +small);
+        //teacher
+        // var num1 = parseInt(prompt("첫정수"));
+        // var num2 = parseInt(prompt("두번째"));
+        // var result= ( num1 < num2) ? num1 : num2;
+        // console.log("작은수 : "+result);
+
+        // 생년월일을 입력하여 성인인지 아닌지 판별하기
+        // var birth= parseInt(prompt('생년월일 8자 입력'));
+        // // 19991212 -> 19991212/10000 -> 1999.1212 여기에 parseInt를 적용하면 1999
+        // // 3, 4, 6, 7 -> 3*1000 + 4*100 + 6*10 + 7 -> 3467 
+        // var age = 2023 - parseInt(birth/10000);
+        // var result = ( age>=19) ? "성인입니다" : "미성년입니다"
+        // console.log(result);
+
+        var num1 = parseInt(prompt("10, 100, 50 중에 하나만 입력 "));
+
+        var result=(num1==10) ? 10 : "틀린값";
+        result = (num1==100) ? 100 : result ;
+        result = (num1==50) ? 50 : result ;
+        console.log("당신은" + result +"을 입력했습니다");
 
         
-
-
 
     </script>
 </head>
