@@ -1,0 +1,70 @@
+<!-- javascript 변수 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+     // 데이터의종류는 숫자데이터와 문자데이터가있다.
+     // 숫자데이터는 정수데이터, 실수데이터,
+     // 문자데이터 - 자바스크립트에서는 문자열 데이터이다.
+     // 문자열 데이터를 직접작성할시에는 반드시 " "(큰따옴표), ' '(작은따옴표) 감싸기, 그렇지않으면 변수나 함수로 인식.
+     // 변수는 데이터를 저장하고 사용하기위해 생설한다.
+     // 변수생성 방법
+     // 1. 타입(범위)지정 - var, let, const
+     // 2. 변수이름 정하기 - 변수의 목적에 맞는 이름으로 카멜표기법, 스네이크표기법으로 작성.
+     //    카멜표기법 - iLoveHtml 단어가바뀔때마다 앞자를 대문자표기
+     //    스네이크 표기법 - i_love_html
+     // 3. 초기데이터 저장 - 대입연산자(=)로 변수에 처음에 저장할 데이터 저장
+     // 4. var iLoveHtml = 0;
+      
+        // var birthYear = parseInt( prompt("태어난년도"));
+        // var age = 2023 - birthYear;
+        // document.write("태어난 연도 : " +birthYear +"년, 나이 :" +age+"살<br>");
+
+        // parseInt() - 정수로 변환, parseFloat() - 실수로 변환 
+        // var apple = 35; //사과35개
+        // var per = parseInt(prompt("인원수")); //parseInt 는 변수를 
+        // document.write("총인원 :" +per+"명, 1인당 사과 :" + parseInt(apple/per)+"개<br>" ); // parseInt - 정수만 나타나게 한다.
+
+        // 원의 반지름을 입력하여 넓이를 구하여 출력하기, 넓이는 정수만 출력
+        // 넓이 구하는식 : 반지름*반지름*3.14 
+        // me
+        // var radius = parseInt( prompt("원의반지름"));
+        // document.write("원의넓이 :" + parseInt(radius*radius*3.14));
+
+        // teacher
+        // var radius = parseInt( prompt("반지름 입력"));
+        // var area = parseInt( radius*radius*3.14 );
+        // document.write("원의 넓이 :" +area );
+
+        // 국어, 수학, 역사 3과목의 점수를 각각 입력받기
+        // 총점과 평균을 출력하기, 평균은 정수만 출력
+        // me
+        // var kor = parseInt(prompt("국어점수 입력"));
+        // var meth = parseInt(prompt("수학점수 입력"));
+        // var hist = parseInt(prompt("역사점수 입력"));
+        // var avr = parseInt((kor+meth+hist)/3);
+        // document.write("평균점수 : " + avr);
+
+        // teacher
+        var kor = parseInt(prompt("국어점수"));
+        var mat = parseInt(prompt("수학점수"));
+        var his = parseInt(prompt("역사점수"));
+
+        var total = kor + mat + his;
+        var avg = parseInt(total/3);
+        document.write("총점 : " + total + "점, 평균 : " + avg +"점<br>");
+
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
