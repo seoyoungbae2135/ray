@@ -104,8 +104,8 @@
         //console.log(result);
 
         // 10과 8을 비교하여 두 수 중에서 큰 수를 출력하시오
-        var result = (10>8) ? 10 : 8;
-        console.log("두수중 큰수는 :"+result);
+        //var result = (10>8) ? 10 : 8;
+        //console.log("두수중 큰수는 :"+result);
         // 가장큰 수를 출력
         //var num1= parseInt(prompt("첫번째 정수 입력"));
         //var num2= parseInt(prompt("두번째 정수 입력"));
@@ -132,14 +132,101 @@
         // var result = ( age>=19) ? "성인입니다" : "미성년입니다"
         // console.log(result);
 
-        var num1 = parseInt(prompt("10, 100, 50 중에 하나만 입력 "));
+        // var num1 = parseInt(prompt("10, 100, 50 중에 하나만 입력 "));
 
-        var result=(num1==10) ? 10 : "틀린값";
-        result = (num1==100) ? 100 : result ;
-        result = (num1==50) ? 50 : result ;
-        console.log("당신은" + result +"을 입력했습니다");
+        // var result=(num1==10) ? 10 : "틀린값";
+        // result = (num1==100) ? 100 : result ;
+        // result = (num1==50) ? 50 : result ;
+        // console.log("당신은" + result +"을 입력했습니다");
 
+        // 국어, 영어 2과목 접수 입력받기
+        // 2과목의 평균점수가 65점 이상이면 통과라고 출력
+        // 65점 미만이면 낙제라고 출력하시오
+        // me
+        // var kor = parseInt(prompt("국어점수 입력"));
+        // var eng = parseInt(prompt("영어점수 입력"));
+        // var avg = (kor + eng)/2
+        // var result = (avg>=65) ? "통과" : "낙제";
+        // console.log(result);
+        // teacher
+        // var kor = parseInt(prompt("국어점수"));
+        // var eng = parseInt(prompt("영어점수"));
+        // var avg = (kor+eng)/2
+        // var res = (avg >= 65) ? "통과" : "낙제";
+        // console.log("점수 :"+ avg + "결과 :"+ res);
+
+        // 노트북을 사고싶다. 두대의 노트북을 장바구니에 담아놓았다.
+        //1번 노트북의 가격은 1290000원이다.
+        //2번 노트북의 가격은 1854000원이다.
+        //현재 내통장의 잔고를 입력하여
+        //몇번째 노트북 구매가 가능한지 또는 두개 전부 구매가 불가능한지 출력하시오.
+        //me
+        // var pay = parseInt(prompt("통장잔고 입력"));
+        // var note1 = 1290000
+        // var note2 = 1845000
+        // var sum = note1+note2
+        // var buy1 = (pay>=note1) ? "1번노트북구매가능" : "구매불가";
+        // var buy1 = (pay>=note2) ? "2번노트북구매가능" : buy1;
+        // var buy1 = (pay>=sum) ? "모두구매가능" : buy1;
+        // console.log(buy1);
+        //teacher
+        // var money = parseInt(prompt("통장잔고"));
+        // var result = (momey >= 1290000) ? "1번 구매가능" : "구매불가";
+        // result= (money >= 1854000) ? "2번 구매가능" : result;
+        // console.log(resolt);
+
+        // 세개의 정수를 입력받으세요
+        // 세정수 중에서 가장 큰 수만 출력
+        // (두개의 숫자가 같은 숫자라면 그래도 큰 숫자 출력)
+        // 단, 세개의 정수가 모두 같은 숫자라면 모두같다 라고만 출력
+        // me
+        // var int1 = parseInt(prompt("첫번째정수 입력")) ;
+        // var int2 = parseInt(prompt("두번째정수 입력"));
+        // var int3 = parseInt(prompt("세번째정수 입력"));
+        // var big1 = (int1>int2) ? int1 : int2;
+        // var sam1 = (int1==int2) ? int1 : int2;
+        // var big2 = (big1>int3) ? big1 : int3;
+        // var sam1 = (sam1==int3) ? 
+        // var big = (int2>int3) ? int2 : int3;
+        // var big = (int1===int2) ?  : big;
+        // var big = (sam1===int3) ? "모두같다" : big;
+        // console.log(big);
         
+        // teacher
+        // var num1 = parseInt(prompt("첫번째"));
+        // var num2 = parseInt(prompt("두번째"));
+        // var num3 = parseInt(prompt("세번째"));
+        // // 가장 큰수 찾는 곳
+        // var big = (num1>num2) ? num1 : num2;
+        // big = (big > num3) ? big : num3;
+        // // 모두 같은 숫자인지 판별하는 곳
+        // var same = (num1 == num2) ? num1 : 0;
+        // same = (same == num3) ? 1 : 0;
+
+        // var result = (same==1) ? "모두같다" : "가장큰수"+big;
+        // console.log(result);
+
+        //var num = parseInt(Math.random()*10)+1; //난수발생기 0.0000000000000 ~ 0.9999999999999 *를 해주면 1단위가 랜덤으로 발생
+        //var num = parseInt(Math.random()*27)+21; // 21~47 까지 난수 발생
+
+        //console.log(num);
+
+        var coin = parseInt( Math.random()*2);
+        // 0. 앞면, 1. 뒷면
+        var user = parseInt(prompt("0-앞면, 1-뒷면"));
+        var result = (coin==user) ? "맞다" : "틀렸다"
+        console.log(result);
+
+        // 과제
+        // 컴퓨터가 육면체 주사위를 던졌다.
+        // 나도 육면체 주사위를 던졌다.
+        // 주사위 값이 크면 이기는 게임이다.
+        // 내가 승리했는가 패배 했는가 출력하세요.
+        // 단, 같은 숫자라면 비김
+        
+        // 
+
+
 
     </script>
 </head>
