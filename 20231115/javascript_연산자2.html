@@ -11,15 +11,191 @@
         // -참(ture), 거짓(false)을 연산하는 연산자
         // and(&&)(&하나만 쓰면 비트연산자 이다.), or(||), not(!)
 
-        ( 10>5 ) && ( 5<7 )  // 논리연산자 양쪽에 비교연산자가 있어야 한다. 조건이 두개일때 사용한다.
+        ( 10>5 ) && ( 5<7 )  // &&, || 논리연산자 양쪽에 조건식이 필히 있어야 한다. 조건이 두개일때 사용한다.
         // T익스프레스에 타려면 키가 130이상, 190이하
-        //  ( tall >= 130 ) && ( tall <= 190 )
+        //  ( tall >= 130 ) && ( tall <= 190 )  && 연산자는 곱하기
 
         // 놀이기구 이용조건  키가 130이상 또는 나이가 15살 이상.
-        // ( tall >== 130 ) || ( age >= 15 )
+        // ( tall >== 130 ) || ( age >= 15 ) || 연산자는 더하기
+
+        // (a.50) && (b<10) && ((c<20) || (d>40))   // 우선순위 없이 순서대로 동작한다, 우선순위를 주려면 ()를 적용한다.
+
+        // ( a%1 ==0 ) || (a%2==0) || (a%3==0) || .......  // !을 사용하면 여러개의 논리연산자를 간단하게 할 수 있다 
+        // !(a%10==0)
+        // ( a%10 !=0 )
+
+        // 세개의 정수 중 큰수출력, 세개가 모두 같다면 같다 출력
+
+        // var num1 = parseInt(prompt("첫번째 정수"));
+        // var num2 = parseInt(prompt("두번째 정수"));
+        // var num3 = parseInt(prompt("세번째 정수"));
+
+        // var result = (num1 > num2) ? num1 : num2 ;
+        // result = (result > num3) ? result : num3;
+        // result = (num1 == num2 && num1 == num3) ? "모두같다" : "큰수" + result;
+        // console.log(result);
+
+        // and연산자는 여러개의 조건을 만들어야 되는 경우에 조건 사이사이에
+        // 그리고를 넣어서 표현했을때 자연스러워야 한다.
+        // 심부름으로 소금, 고추장을 사오라고 했다면
+        // 심부름을 잘 마치려면 소금하고 고추장을 사와야 한다.
+        //      소금하고(그리고) 고추장
+
+        // or연산자는 여러개의 조건을 사용해서 만들어야하는 경우에 조건 사이사이에 
+        // 또는을 넣어서 표현했을때 자연스러워야 한다.
+        // 심부름으로 간장이나 액젓을 사오라고 했다면
+        // 간장 또는 액젓 둘중 하나만 사가면 된다.
+        // 
+
+        // 야바위 만들기
+        // 종이컵이 세개가 있다. 세개의 종이컵중 한군데에만 주사위가 들어있다.
+        // 주사위가 들어있는 종이컵을 맞추면 2배
+        // 주사위 위치도 맞추고 주사위 값도 맞추면 6배
+        // 주사위는 사면체 이다.
+        
+        // var dealer = parseInt( Math.random()*3)+1;
+        // var dice = parseInt( Math.random()*4)+1;
+
+        // var user_cup = parseInt(prompt("몇번째 종이컵 선택"));
+        // var user_dice = parseInt(prompt("주사위값은?"));
+
+        // ( dealer == user_cup) ? " 2배 " : " 꽝 "; // 조건연산자만으로 하면 코드가 길어진다.
+        //  추가 연산자 삽입필요
+        // ( dice == user_dice) ? " 6배 " : " 꽝 ";
+
+        // var result = ( dealer == user_cup && dice == user_dice) ? " 6배 " : (dealer==user_cup) ? "2배" : "꽝"; //논리연산자로하면 한줄로 가능
+        // console.log(result);
+
+        // 가위 바위 보!!
+        // 1. 가위 2. 바위 3. 보
+        
+        // var com = parseInt( Math.random()*3)+1;
+        // var user = parseInt(prompt("1.가위 2.바위 3.보"));
+
+        //var result = (com==user) ? "비김" : (com==1 && user==2) || (com==2 && user==3) || (com==3 && user==1) ? "이김" : "패배"; //이기는 조건을 논리연산자로 적용
+        //console.log(result);
+
+        // var cl = user - com;  // 또다른 방법
+        // var result = ( cl == 0)? "비김" : (cl==1 || cl==-2) ? "이김" : "패배"; // 내가 이기는 경우는 cl값이 1 이거나 -2 뿐이다  
+        //console.log(result);
+
+        // 문제
+        //document.write("<div class=red></div>")
+        // 문자열 비교하기는 a === "사각형" a에 사각형 이라는 문자열이 들어가 있는가? 라는 조건식
+        // 1. 사각형의 색상을 입력하세요 (빨강, 파랑, 노랑)
+        // 2. 크기를 입력하세요 (1, 2, 3,) 1-100,100  2-200,200  3-300,300 (사각형의 크기)
+
+        // me
+        // var color = parseInt(prompt("색상을 입력하세요 1.빨강, 2.파랑, 3.노랑"));
+        // var size = parseInt(prompt("크기를 입력하세요"));
+        // color = (color==="빨강") ? 1 : 0;
+
+        // document.write("<div class=red></div>")
+        //document.write("<div class=blue></div>")
+        //document;
+
+        // teacher
+        // var color = prompt("색상입력");
+        // var size = prompt("크기입력(1, 2, 3)");
+
+        // var className = (color==="빨강" && size==="1") ? "red one" : 
+        //                 (color==="빨강" && size==="2") ? "red two" : 
+        //                 (color==="빨강" && size==="3") ? "red three" : 
+        //                 (color==="파랑" && size==="1") ? "blue one" :
+        //                 (color==="파랑" && size==="2") ? "blue two" :
+        //                 (color==="파랑" && size==="3") ? "blue three" :
+        //                 (color==="노랑" && size==="1") ? "yellow one" :
+        //                 (color==="노랑" && size==="2") ? "yellow two" :
+        //                 (color==="노랑" && size==="3") ? "yellow three" : "";
+
+        // document.write(`<div class='${className}'></div>`); // 클래스의 띄어쓰기 때문에 '${className}'을 따옴표로 묶어줘야한다
+                                                            // document.write는 <body>태그내에 쓰이는 것이기 때문에 (F12 로 확인)
+                                                            // 변수 className(red one 등)이 class red, class one 으로 동작하게된다.
+
+
+        // 조건연산자 - 조건식의 결과에 따른 동작을 간단하게 구현할때 사용
+        // a != 0 ? 100 : 0 ;
+
+        // 조건문 if, switch
+
+        // if문 - 조건식의 참, 거짓에 따라 내용이 실행된다.
+
+        // if( 10>5){   //if문 내에 뭐든 널어서 할 수 있다.
+        //     var a=10;
+        //     a=10+222;
+        //     document.write(a);
+        //     console.log(a);
+        //}
+
+        // 놀이기구 탑승조건 키가 130 이상
+        // var tall=150;
+        // if( tall>=130){
+        //     document.write("탑승가능");
+        //     console.log("탑승가능");
+        // }else{
+        //     document.write("탑승불가");
+        //     console.log("탑승불가");
+        // }
+        // if(조건식) { 조건식이 참일경우 내용 }
+        // else {조건식이 거짓일 경우 내용}
+
+        // 두개의 정수를 입력받아 가장 작은수 출력
+        //me
+        var num1 = parseInt(prompt("1번 정수입력"));
+        var num2 = parseInt(prompt("2번 정수입력"));
+        
+        if (num1>num2){
+            console.log(num2);
+        }else{ 
+            console.log(num1);
+        }
+        // teacht
+        var num1 = parseInt(prompt("1번정수"));
+        var num2 = parseInt(prompt("2번정수"));
+        if(num1>num2){
+            document.write(num1);
+        }else{
+            document.write(num2);
+        }
+
+        // prompt("다음 추가등록을 하시겠습니까?(y/n)")
+        // y 입력시 - 추가등록을 시작합니다. 출력
+        // n 입력시 - 등록을 종료합니다. 출력
+        // 대, 소문자 모두 인식하도록 만들기
+        // me
+        var ent=parseInt(prompt("다음 추가 등록을 하시겠습니까?(y/n)")) ;
+        if(ent=y || ent=Y){
+            console.log("추가등록을 시작합니다.");
+        }else{
+
+        }
+        // teacht
+        var prog = prompt("다음추가등록을하시겠습니까?(y/n)");
+        if(prog==="y" || prog==="Y"){
+            document.write("추가등록을 시작합니다");
+        }else if(prog==="n" || prog==="N"){  // else에는 조건문을 바로 쓸수없다, 
+                document.write("등록을 종료합니다"); 
+        }
+
+
+
 
 
     </script>
+    <style>
+            .red{ background:red}
+            .yellow{background:yellow}
+            .blue{background: blue}
+            .one{width:100px; height:100px}
+            .two{width:200px; height:200px}
+            .three{width:300px; height:300px}
+
+
+        /* div{ width:200px; height:50px;} 
+        .red{background:red}
+        div{ width:100px; height:100px;}
+        .blue{background:blue} */
+    </style>
 
 </head>
 <body>
