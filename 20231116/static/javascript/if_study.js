@@ -65,24 +65,24 @@ window.onload=function(){
        아래와 같이 한다.
     */
 
-    var score = 75;
+    // var score = 75;
     // switch(){
     //     case 100: case 99: case 98: case 97: 
     // } 여러개를 구분하여 적용할때 ( 90점 이상은 A, 80점 이상은 B, 70점 이상은 c, 70점 미만은 F 일경우)
             // 아래와같이 계산식을 적용하여 간단히 만든다.
-    switch( parseInt(score/10)){
-        case 10: case 9:
-        document.write("A학점"); break;
-        case 8:
-            document.write("B학점"); break;
-        case 7:
-            document.write("C학점"); break;
-        default:
-            document.write("F학점");
-    }
+    // switch( parseInt(score/10)){
+    //     case 10: case 9:
+    //     document.write("A학점"); break;
+    //     case 8:
+    //         document.write("B학점"); break;
+    //     case 7:
+    //         document.write("C학점"); break;
+    //     default:
+    //         document.write("F학점");
+    // }
 
 
-    // 과제
+    // 20231116 과제
     // 주차비 정산
         // apple주차장의 주차요금 표
         //  기본 주차비 - 1000원, 기본시간 - 30분
@@ -97,6 +97,36 @@ window.onload=function(){
         //   8시간 이상 주차시 요금은 무조건 10000원
 
         // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오.
+        // report
+    var time = parseInt(prompt("주차시간입력"));
+    var cost = 1000;
+    var cost2= 1500;
+    var cost4= 2500;
+    var cost8= 10000;
+    
+    if((time<120) && (time>30) ){
+        time = time-30;
+        var price = parseInt(time/10) * 100;
+        var pay = price+cost; 
+        alert(pay+"원");
+    }else if((time<240) && (time>=120) ){
+        time = time-120;
+        var price = parseInt(time/10) * 100;
+        var pay = price+cost2;
+        alert(pay+"원");
+    }else if((time<480) && (time>=240) ){
+        time = time-240;
+        var price = parseInt(time/10) * 100;
+        var pay = price+cost4;
+        alert(pay+"원");
+    }else if(time>=480){
+        var pay = cost8;
+        alert(pay+"원");
+    }else{
+        alert(cost+"원")
+    }
+
+
 
 
 
