@@ -98,34 +98,54 @@ window.onload=function(){
 
         // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오.
         // report
+    // var time = parseInt(prompt("주차시간입력"));
+    // var cost = 1000;
+    // var cost2= 1500;
+    // var cost4= 2500;
+    // var cost8= 10000;
+    
+    // if((time<120) && (time>30) ){
+    //     time = time-30;
+    //     var price = parseInt(time/10) * 100;
+    //     var pay = price+cost; 
+    //     alert(pay+"원");
+    // }else if((time<240) && (time>=120) ){
+    //     time = time-120;
+    //     var price = parseInt(time/10) * 100;
+    //     var pay = price+cost2;
+    //     alert(pay+"원");
+    // }else if((time<480) && (time>=240) ){
+    //     time = time-240;
+    //     var price = parseInt(time/10) * 100;
+    //     var pay = price+cost4;
+    //     alert(pay+"원");
+    // }else if(time>=480){
+    //     var pay = cost8;
+    //     alert(pay+"원");
+    // }else{
+    //     alert(cost+"원")
+    // }
+
+    // teacher
+
     var time = parseInt(prompt("주차시간입력"));
     var cost = 1000;
-    var cost2= 1500;
-    var cost4= 2500;
-    var cost8= 10000;
-    
-    if((time<120) && (time>30) ){
-        time = time-30;
-        var price = parseInt(time/10) * 100;
-        var pay = price+cost; 
-        alert(pay+"원");
-    }else if((time<240) && (time>=120) ){
-        time = time-120;
-        var price = parseInt(time/10) * 100;
-        var pay = price+cost2;
-        alert(pay+"원");
-    }else if((time<480) && (time>=240) ){
-        time = time-240;
-        var price = parseInt(time/10) * 100;
-        var pay = price+cost4;
-        alert(pay+"원");
-    }else if(time>=480){
-        var pay = cost8;
-        alert(pay+"원");
+
+    if(time >= 480){  // 범위가 큰 것 부터 코드를 작성한다 
+        cost=10000; time=0;
+
+    }else if(time >= 240){
+        cost=2500; time=time-240;
+
+    }else if(time >= 120){
+        cost=1500; time=time-120;
+
     }else{
-        alert(cost+"원")
+        time = time<30 ? 0 : time-30;
     }
 
+    var price = Math.floor(time/10)*100+cost; //Math.floor() 가 소숫점이하를 제외하는 명령, parseInt는
+    document.write(`주차요금:${price}원`)
 
 
 
