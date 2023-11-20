@@ -383,7 +383,7 @@
     // document.write(count+" 번"+birth_year);
 
     
-    var com = Math.floor(Math.random()*50)+1;
+    // var com = Math.floor(Math.random()*50)+1;
 
     // for(;true;){
     //     var user=parseInt(prompt("업다운 게임"));
@@ -402,42 +402,88 @@
     // 20231120 과제 위 코드를 참고하여(위는 com의 난수를 내가 맞추는 게임)
     // 내가낸 숫자를 com이 맞추는 게임
     // document.write 로 출력
+    // 2023.11.20 report
+    var user = parseInt(prompt("업다운게임 1~50 정수입력"));
+    var com = 25
+
+    for( ; true ;){
+        if( com > user ){
+            com = com-12;
+            document.write("다운");
+        }if( com < user ){ 
+            com = com+13;
+            document.write("업");
+        }
+        if( user = com ){
+            document.write("정답");
+            break;
+        }
+        if( com > user ){
+            com = com-6;
+            document.write("다운");
+        }
+        if( com < user ){ 
+            com = com+6;
+            document.write("업");
+        }
+        if( user = com ){
+            document.write("정답");
+            break;
+        }
+        if( com > user ){
+            com = com-6;
+            document.write("다운");
+        }if( com < user ){ 
+            com = com+6;
+            document.write("업");
+        }
+        if( user = com ){
+            document.write("정답");
+            break;
+        }
+
+    }
+    document.write(com);
+
+
+
+
     
     
 // for(var i=1; i<9; i++); 와 for(var i=1; i<=9-1; i++); 는 같다.
 // 문자열의 알파벳 위치번호 -> 위치번호를 프로그래밍 에서는 인덱스라고 한다.
 
-    var word = "international prototype";
-    // 지정한 알파벳의 갯수가 몇개인지 구하기
-    var alp = "o";
-    var count = 0;
-    for(var i=0; i<word.length; i++){
-        if(word.charAt(i) == alp );
-            count++;
-    }
-    document.write(`${alp}알파벳은 총 ${count}개 있다. `)
+//     var word = "international prototype";
+//     // 지정한 알파벳의 갯수가 몇개인지 구하기
+//     var alp = "o";
+//     var count = 0;
+//     for(var i=0; i<word.length; i++){
+//         if(word.charAt(i) == alp );
+//             count++;
+//     }
+//     document.write(`${alp}알파벳은 총 ${count}개 있다. `)
     
-    for( var i=1; i<=100; i++){
-        if( i%3 == 0){
-            document.write("<div> pizzle</div>");
-        }else if(i%10==0){
-            document.write("<div> buzzle</div>");
-        }else
-            document.write(i+" ");
-    }
+//     for( var i=1; i<=100; i++){
+//         if( i%3 == 0){
+//             document.write("<div> pizzle</div>");
+//         }else if(i%10==0){
+//             document.write("<div> buzzle</div>");
+//         }else
+//             document.write(i+" ");
+//     }
 
-// 30, 60, 90 에서 pizzle과 buzzle이 같이나오
-    for( var i=1; i<=100; i++){
-        if(i%3==0 && i%10==0){
-            document.write("<div>pizzle buzzle</div>");
-        }
-        else if( i%3 == 0){
-            document.write("<div> pizzle</div>");
-        }else if(i%10==0){
-            document.write("<div> buzzle</div>");
-        }else
-            document.write(i+" ");
-    }
+// // 30, 60, 90 에서 pizzle과 buzzle이 같이나오
+//     for( var i=1; i<=100; i++){
+//         if(i%3==0 && i%10==0){
+//             document.write("<div>pizzle buzzle</div>");
+//         }
+//         else if( i%3 == 0){
+//             document.write("<div> pizzle</div>");
+//         }else if(i%10==0){
+//             document.write("<div> buzzle</div>");
+//         }else
+//             document.write(i+" ");
+//     }
 
 
     
