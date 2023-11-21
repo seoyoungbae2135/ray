@@ -1,0 +1,311 @@
+<!-- script2_loop2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    
+    
+    <script>
+       // window.onlode=function(){
+        // for(var i=1; i<=10; i++){
+        //     document.write(i+"");
+        // }
+        // document.write("<br>");
+
+        // var i=1;   // while문은 시작을 별도로 둔다
+        // while(i<=10){  // 두번째 ;를 사용하지않는다
+        //     document.write(i+"");
+        //     i++;    // 증감식을 {}안에 넣는다.
+        // }
+
+        // for문 - 반복횟수가 정해진 경우에 주로 사용
+        // while문 - 반복횟수가 정해지지 않은 경우 사용
+        // for(;ture;){}
+        // while(true){} while문은 조건식만 필요하다
+
+        // var i=1;
+        // while(i<=9){
+        //     document.write(`5*${i}=${5*i}<br>`);
+        //     i++;
+        // }
+
+        // 1부터 10까지 총합 구하기
+        // me
+        // var sum=0;
+        // var i=1;
+        // while(i<=10){
+        //     sum = sum + i;
+        //     i++;
+        // }
+        // document.write("1부터 10까지 총합 : " +sum+"<br>");
+
+        // // teacher
+        // var sum = 0;
+        // var i=1; 
+        // while(i<=10){
+        //     sum = sum+i;
+        //     i++;
+        // }
+        // document.write(sum+"<br>");
+
+        // for(var i=1; i<=3; i++){
+        //     for(var k=1; k<=2; k++){
+        //         document.write(`${i} ${k} <br>`);
+        //     }
+        // }
+
+        // var i=1, k=1;
+        // while(i<=3){
+        //     k=1;  // while문의 경우 초기화가 필요하다.
+        //     while(k<=2){
+        //         document.write(`${i} ${k} <br>`);
+        //         k++;
+        //     }
+        //     i++;
+        // }
+
+        // 지금현재 시점에서 반복분 구구단 2단 부터 9단까지 출력하는 것
+        // for문과 while문으로 구현하고 어떻게 동작하는지 이해된다면 
+        // 반복문 기초는 끝!!! 나머지는 응용
+
+        // for(;true;){
+        //     var num = parseInt(prompt("숫자입력"));
+        //     if(num==0) break;
+        // }        
+        // 위의 for문을 while문으로 하면 
+        // while(true){
+        //     var num = parseInt(prompt("숫자입력"));
+        //     if(num==0) break;
+        // }
+
+        // var word="요즘날씨가 많이 추워졌죠?";
+        // var len=word.length;
+        // while( len != -1 ){
+        //     document.write(word.charAt(len--)); //증감연산자 --를 len 앞에 붙이면 연산이 먼저 실행 
+        // }
+
+        // 베스킨 라빈스 31 게임
+        // 31입력하면 패배
+        // 1부터 31까지 숫자를 한번씩낸다
+        // 입력할 수 있는 숫자의 갯수는 최대 3개
+        //몇개의 숫자를 제시 할거냐를 입력받아서 진행 
+
+        // var user=0, com=0, 베라=1;
+        
+        // var flag=false; // 게임을 끝내기 위한 변수
+        // while(true){
+        //     var out=""; // 진행내용을 저장할 변수
+        //     user= parseInt(prompt("숫자몇개?"));
+        //     out += "나 : ";
+        //     for( var u=1; u<=user; u++ ){
+        //         out += `${베라++}`;
+        //         if(베라>31){ out+="패배"; flag= true; break; } 
+        //     }
+        //     out += "\n";
+        //     alert(out);
+        //     if(flag) break;
+        //     com = Math.floor(Math.random()*3)+1;
+        //     out = "컴 :";
+        //     for(var c=1; c<=com; c++){
+        //         out += `${베라++}`;
+        //         if(베라>31){out+="패배"; flag= true; break; }
+        //     }
+        //     out += "\n";
+        //     alert(out);
+        //     if(flag) break;
+        // }
+
+        // do~while ; 
+        // for, while 기본 동작순서
+        //      초기값 -> 조건식 비교 -> 참이라면 -> {내용} -> 증감식 -> 조건식비교
+        //      -> 참 ->  {내용} -> 증감식 -> 조건식비교 -> 참 -> .......
+        //      조건식비교 -> 거짓이면 -> 반복문 종료
+        //  do~while  초기값 -> {내용} -> 증감식 -> 조건식비교
+
+        // for(var i=10; i<=5; i++){
+        //     document.write(i+"for문");  // for문은 조건문이 거짓이면 한번도 실행하지않는다
+        // }
+
+        // var i=10;
+        // do{
+        //     document.write(i+" "); // do~while문은 조건문이 거짓이어도 한번은 실행한다.
+        // }while(i<=5); // do~while 에서는 ; 을 적용 
+
+        // 아래와 같이 조건문에 해당되는 입력이 될때까지 계속실행할 때 적용한다. 
+        // var user=0
+        // do{
+        //     user = parseInt(prompt("1~50입력"));
+        // }while(!(user<=1 && user<=50));
+
+        
+        // 숫자 맞추기
+        // 숫자를 총세개 입력한다.
+        // 입력한 숫자를 랜덤으로 일치하는 숫자 찾기, 위치는 불특정
+
+        // function find(){
+        //     var num1 = Number($("#num1").val());
+        //     var num2 = Number($("#num2").val());
+        //     var num3 = Number($("#num3").val());
+
+        //     var count=0; 
+        //     while(true){
+        //         var ok=0; // 숫자 하나씩 일치할때마다 값 증가, 3이 되면 3개 숫자 모두 일치.
+        //         var a=Math.floor(Math.random()*45)+1; // 1~45
+        //         var b=Math.floor(Math.random()*45)+1;
+        //         var c=Math.floor(Math.random()*45)+1;
+        //         if(num1==a || num1==b || num1==c)
+        //             ok++;
+        //         if(num2==a || num2==b || num2==c)
+        //             ok++;
+        //         if(num3==a || num3==b || num3==c)
+        //             ok++;
+        //         count++; //세개 숫자에 대한 일치여부를 검사했으니 카운트 1씩 증가
+        //         if(ok==3){
+        //             $("#result").html(`세개 숫자 일치까지 <b>${count}</b>번 동작`);
+        //             break;
+        //         }
+        //     }
+        // }
+
+        /*
+            이번문제는 혼자 아니고 팀으로 문제풀기
+            1팀 : 강동욱,  송재영
+            2팀 : 김의찬, 인호성, 박종권
+            3팀 : 서영배, 김정환, 여영근
+            4팀 : 김민수, 노재호, 이다희
+            5팀 : 남기현, 이가림, 전윤진
+
+            문제는 2문제이고 2문제중 하나를 선택해서 풀면 됩니다.
+            문제1. 비밀번호 찾기
+            비밀번호 4개 숫자를 다음 조건에 맞게 찾으세요
+            1. 각 숫자는 1~9사이의 값이다.
+            2. 4개 숫자는 중복이 없다.
+            3. 1번째 숫자는 4번째 숫자보다 2만큼 크다
+            4. 2번째 숫자는 3번째 숫자보다 작다.
+            5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
+               예) 1234 + 4321 
+
+            문제2. 숫자야구 게임
+            랜덤값으로 3개의 숫자 뽑아내기(중복없음)
+            랜덤범위는 1~9
+            랜덤숫자 3개 맞출때까지 계속 3개의 숫자를 입력하기
+            랜덤숫자가 835라면
+            135를 입력시 출력되는 내용은 1스트라이크 0볼 2아웃
+            286을 입력시 출력되는 내용은 0스트라이크 1볼 2아웃 
+
+        */
+        // 숫자 야구게임
+        // me
+
+
+       
+        // while(true){
+        //     var com1 = Math.floor(Math.random()*9)+1;
+        //     var com2 = Math.floor(Math.random()*9)+1;
+        //     var com3 = Math.floor(Math.random()*9)+1;
+        //     if(com1!=com2 && com1!=com3 && com2!=com3)break;
+        // }
+        // document.write(com1 +"<br>");
+        // document.write(com2 +"<br>");
+        // document.write(com3 +"<br>");
+
+
+        // while(true){
+        //     function find(){
+        //         var num1 = Number($("#num1").val());
+        //         var num2 = Number($("#num2").val());
+        //         var num3 = Number($("#num3").val());
+
+        //         if(num1==com1 || num2==com2 || num3==com3){
+        //             $("#result").html(`스트라이크 3 <b>${num1}</b>`);
+        //             break;
+        //         }
+
+        //     }
+        // }
+
+        // teacher
+        //1번문제
+        //var a=0, b=0, c=0, d=0;
+            for(var a=1; a<=9; a++ ){
+                for(var a=1; a<=9; b++ ){
+                    for(var a=1; a<=9; c++ ){
+                        for(var a=1; a<=9; d++ ){
+                    //2. 4개 숫자는 중복이 없다.
+if( a!=b && a!=c && a!=d && b!=c && b!=d && C!=d ){
+    //3. 1번째 숫자는 4번째 숫자보다 2만큼 크다
+    if(a==d+2){
+       // 4. 2번째 숫자는 3번째 숫자보다 작다.
+        if(b<c){
+            //5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
+            var num
+        }
+    }
+}                            
+
+                        }
+                    }
+                }
+            }
+
+        var com1 = Math.floor(Math.random()*9)+1;
+        var b2=0, b3=0;
+        
+        while((b1==b2 || b1==b3 || b2==b3)){
+            b2=Math.floor(Math.random()*9)+1
+            b3=Math.floor(Math.random()*9)+1
+        }
+
+        var show="";
+
+        function find(){
+            var n1 = Number($("#num1").val());
+            var n2 = Number($("#num2").val());
+            var n3 = Number($("#num3").val());
+            var str=0, ball=0;
+            if(n1 == b1) str++;
+            if(n2 == b2) str++;
+            if(n3 == b3) str++;
+            if(n1 == b2 || n1 == b3) ball++;
+            if(n2 == b1 || n2 == b3) ball++;
+            if(n3 == b1 || n3 == b2) ball++;
+            show += `${n1} ${n2} ${n3} 결과 : ${str}스트라이크${ball}볼 ${3-str-ball}아웃<br>`;
+            if( str==3) show+="정답!!!";
+            $("#result".html(show););
+        }
+        /* 과제
+        인구조사
+        가족구성원의 나이를 입력하기 prompt
+        0을 입력하면 더이상 입력처리가 안된다.
+
+        입력이끝나면 결과출력
+        결과출력내용은
+        노인 : 65세 이상
+        성인 : 20~64세
+        청소년 : 8~19세
+        아동 : 1~7세
+
+        총원10명 : 노인2명, 성인5명, 청소년2명, 아동 3명
+
+        */
+
+
+      //  }
+
+    </script>
+
+    <style>
+        input{width:50px;}
+    </style>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <button onclick="find()">실행</button>
+    <div id="result"></div>
+    
+</body>
+</html>

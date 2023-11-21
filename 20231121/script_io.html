@@ -1,0 +1,50 @@
+<!-- script_io.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    
+
+    <script>
+
+        window.onload=function(){ // $(function(){     }) -jQery 사용시
+            // var nameTag = document.getElementById("name");  //id가 name인 태그를 가져와 변수에 저장
+            // alert(nameTag.value);
+        }
+
+        function enroll(){
+            // var nameTag = document.getElementById("name"); // $("#name")로 사용가능, 조건필요 jQuery 라이브러리 - id가 name인 태그를 가져와 변수에 저장
+            // //alert(typeof nameTag.value);
+            // //documwnt.write(nameTag.value);
+            // var res = document.getElementById("result");
+            // res.innerHTML = nameTag.value;   // 태그적용가능한 출력
+            // res.innerText = "<h1>"+nameTag.value+"</h1>"; // 태그적용 불가한 출력
+            
+            // jquery 태그선택 방법 - $("#아이디"), $(".클래스") 
+            // document.getElementById("name").value 를 jQuery로하면
+            // $("result").text( $("#name").val());
+
+            var birth = $("#name").val(); // id가 name인 input 태그의 입력값
+            var age = 2023 - Number(birth.substring(0,4));  // Number - 문자를숫자로 변환
+            $("#result").text(age+"살");
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <input type="text" id="name" value="김유신"><br>  <!-- id name 의 input 태그의 value에 저장된다 -->
+    <button onclick="enroll()">입력</button>   <!-- 버튼태그에 onclick을 작성해야 클릭시 동작을
+    만들수 있다. onclick뒤에 작성하는 내용은 javascript에서 실행할 함수라는 이름을 넣어야한다 -->
+    <!-- <input type="number"><br>
+    <input type="date"><br>
+    <input type="password"><br> -->
+
+    <div id="result"></div>
+
+    
+</body>
+</html>
