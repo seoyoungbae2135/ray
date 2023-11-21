@@ -229,52 +229,54 @@
         // teacher
         //1번문제
         //var a=0, b=0, c=0, d=0;
-            for(var a=1; a<=9; a++ ){
-                for(var a=1; a<=9; b++ ){
-                    for(var a=1; a<=9; c++ ){
-                        for(var a=1; a<=9; d++ ){
-                    //2. 4개 숫자는 중복이 없다.
-if( a!=b && a!=c && a!=d && b!=c && b!=d && C!=d ){
-    //3. 1번째 숫자는 4번째 숫자보다 2만큼 크다
-    if(a==d+2){
-       // 4. 2번째 숫자는 3번째 숫자보다 작다.
-        if(b<c){
-            //5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
-            var num
-        }
-    }
-}                            
+//             for(var a=1; a<=9; a++ ){
+//                 for(var a=1; a<=9; b++ ){
+//                     for(var a=1; a<=9; c++ ){
+//                         for(var a=1; a<=9; d++ ){
+//                     //2. 4개 숫자는 중복이 없다.
+// if( a!=b && a!=c && a!=d && b!=c && b!=d && C!=d ){
+//     //3. 1번째 숫자는 4번째 숫자보다 2만큼 크다
+//     if(a==d+2){
+//        // 4. 2번째 숫자는 3번째 숫자보다 작다.
+//         if(b<c){
+//             //5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
+//             var num
+//         }
+//     }
+// }                            
 
-                        }
-                    }
-                }
-            }
+//                         }
+//                     }
+//                 }
+//             }
 
-        var com1 = Math.floor(Math.random()*9)+1;
-        var b2=0, b3=0;
+        // 2번문제
+
+        // var com1 = Math.floor(Math.random()*9)+1;
+        // var b2=0, b3=0;
         
-        while((b1==b2 || b1==b3 || b2==b3)){
-            b2=Math.floor(Math.random()*9)+1
-            b3=Math.floor(Math.random()*9)+1
-        }
+        // while((b1==b2 || b1==b3 || b2==b3)){
+        //     b2=Math.floor(Math.random()*9)+1
+        //     b3=Math.floor(Math.random()*9)+1
+        // }
 
-        var show="";
+        // var show="";
 
-        function find(){
-            var n1 = Number($("#num1").val());
-            var n2 = Number($("#num2").val());
-            var n3 = Number($("#num3").val());
-            var str=0, ball=0;
-            if(n1 == b1) str++;
-            if(n2 == b2) str++;
-            if(n3 == b3) str++;
-            if(n1 == b2 || n1 == b3) ball++;
-            if(n2 == b1 || n2 == b3) ball++;
-            if(n3 == b1 || n3 == b2) ball++;
-            show += `${n1} ${n2} ${n3} 결과 : ${str}스트라이크${ball}볼 ${3-str-ball}아웃<br>`;
-            if( str==3) show+="정답!!!";
-            $("#result".html(show););
-        }
+        // function find(){
+        //     var n1 = Number($("#num1").val());
+        //     var n2 = Number($("#num2").val());
+        //     var n3 = Number($("#num3").val());
+        //     var str=0, ball=0;
+        //     if(n1 == b1) str++;
+        //     if(n2 == b2) str++;
+        //     if(n3 == b3) str++;
+        //     if(n1 == b2 || n1 == b3) ball++;
+        //     if(n2 == b1 || n2 == b3) ball++;
+        //     if(n3 == b1 || n3 == b2) ball++;
+        //     show += `${n1} ${n2} ${n3} 결과 : ${str}스트라이크${ball}볼 ${3-str-ball}아웃<br>`;
+        //     if( str==3) show+="정답!!!";
+        //     $("#result".html(show));
+        // }
         /* 과제
         인구조사
         가족구성원의 나이를 입력하기 prompt
@@ -290,6 +292,31 @@ if( a!=b && a!=c && a!=d && b!=c && b!=d && C!=d ){
         총원10명 : 노인2명, 성인5명, 청소년2명, 아동 3명
 
         */
+            // 2023.11.21 report
+
+            var silver = 0;
+            var adult = 0;
+            var teen = 0;
+            var child = 0;
+            while(true){
+                var age = parseInt(prompt("나이입력"))
+                if(age>65){
+                    silver++;
+                 }
+                if((age>19 && age<65)){
+                    adult++;
+                }
+                if((age>7 && age<20)){
+                    teen++;
+                }
+                if((age>0 && age<8)){
+                    child++;
+                }
+                if(age==0) break;
+            
+            }
+            var all = silver+adult+teen+child; 
+            document.write(`총원 ${all}명 : 노인 ${silver}명, 성인 ${adult}명, 청소년 ${teen}명, 아동 ${child}명`)
 
 
       //  }
@@ -297,15 +324,15 @@ if( a!=b && a!=c && a!=d && b!=c && b!=d && C!=d ){
     </script>
 
     <style>
-        input{width:50px;}
+       /* input{width:50px;} */
     </style>
 </head>
 <body>
-    <input type="text" id="num1">
+    <!-- <input type="text" id="num1">
     <input type="text" id="num2">
     <input type="text" id="num3">
     <button onclick="find()">실행</button>
-    <div id="result"></div>
+    <div id="result"></div> -->
     
 </body>
 </html>
