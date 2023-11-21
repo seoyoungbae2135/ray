@@ -408,47 +408,38 @@
 
     for( ; true ;){
         if( com > user ){
-            com = com-12;
-            document.write("다운");
-        }if( com < user ){ 
-            com = com+13;
-            document.write("업");
-        }
-        if( user = com ){
-            document.write("정답");
-            break;
-        }
-        if( com > user ){
-            com = com-6;
-            document.write("다운");
-        }
-        if( com < user ){ 
-            com = com+6;
-            document.write("업");
-        }
-        if( user = com ){
-            document.write("정답");
-            break;
-        }
-        if( com > user ){
-            com = com-6;
-            document.write("다운");
-        }if( com < user ){ 
-            com = com+6;
-            document.write("업");
-        }
-        if( user = com ){
-            document.write("정답");
-            break;
-        }
-
+            com = com-5;
+            document.write("다운<br>");
+        }else{break}
     }
-    document.write(com);
+    for( ; true ;){
+        if( com < user ){
+            com = com+1;
+            document.write("업<br>");
+        }else if(com==user){
+            break
+        }
+    }
+    for( ; true ;){
+        if( com < user ){
+            com = com+5;
+            document.write("업<br>");
+        }else{break}
+    }
+    for( ; true ;){
+        if( com > user ){
+            com = com-1;
+            document.write("다운<br>");
+        }else if(com==user){
+            break
+        }
+    }
+    document.write("정답"+com);
 
 
-
-
+    // 2023.11.20 homework teacher
     
+
     
 // for(var i=1; i<9; i++); 와 for(var i=1; i<=9-1; i++); 는 같다.
 // 문자열의 알파벳 위치번호 -> 위치번호를 프로그래밍 에서는 인덱스라고 한다.
