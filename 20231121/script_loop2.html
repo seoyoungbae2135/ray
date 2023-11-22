@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    
     
     <script>
-       // window.onlode=function(){
+        // window.onlode=function(){
         // for(var i=1; i<=10; i++){
         //     document.write(i+"");
         // }
@@ -197,10 +197,7 @@
 
         */
         // 숫자 야구게임
-        // me
-
-
-       
+        // me       
         // while(true){
         //     var com1 = Math.floor(Math.random()*9)+1;
         //     var com2 = Math.floor(Math.random()*9)+1;
@@ -213,7 +210,7 @@
 
 
         // while(true){
-        //     function find(){
+        //     function find(){  //function 함수는 상위에 아무것도 없어야 한다 while문 안에넣은것은
         //         var num1 = Number($("#num1").val());
         //         var num2 = Number($("#num2").val());
         //         var num3 = Number($("#num3").val());
@@ -224,7 +221,7 @@
         //         }
 
         //     }
-        // }
+        //  }
 
         // teacher
         //1번문제
@@ -277,6 +274,7 @@
         //     if( str==3) show+="정답!!!";
         //     $("#result".html(show));
         // }
+
         /* 과제
         인구조사
         가족구성원의 나이를 입력하기 prompt
@@ -293,46 +291,79 @@
 
         */
             // 2023.11.21 report
-
-            var silver = 0;
-            var adult = 0;
-            var teen = 0;
-            var child = 0;
-            while(true){
-                var age = parseInt(prompt("나이입력"))
-                if(age>65){
-                    silver++;
-                 }
-                if((age>19 && age<65)){
-                    adult++;
-                }
-                if((age>7 && age<20)){
-                    teen++;
-                }
-                if((age>0 && age<8)){
-                    child++;
-                }
-                if(age==0) break;
+            // var ent = " ";
+            // var silver = 0;
+            // var adult = 0;
+            // var teen = 0;
+            // var child = 0;
+            // while(true){
+            //     var age = parseInt(prompt("나이입력"))
+            //     if(age>=65){
+            //         silver++;
+            //      }
+            //     if((age>19 && age<65)){
+            //         adult++;
+            //     }
+            //     if((age>7 && age<20)){
+            //         teen++;
+            //     }
+            //     if((age>0 && age<8)){
+            //         child++;
+            //     }
+            //     if(age==0) break;
             
+            // }
+            // var all = silver+adult+teen+child; 
+            //  ent = `총원 ${all}명 : 노인 ${silver}명, 성인 ${adult}명, 청소년 ${teen}명, 아동 ${child}명`;
+            //  $("#result").html(ent);
+
+            //document.write(`총원 ${all}명 : 노인 ${silver}명, 성인 ${adult}명, 청소년 ${teen}명, 아동 ${child}명`)
+            // 2023.11.21 homework teacher
+
+            var old=0, adult=0, teen=0, child=0, count=0;
+
+            var end=true; //구성원나이를 입력가능 도는 입력 불가능하게 만들기 위한 변수
+
+            function survey(){
+                if(end){
+                    var age = Number($("#age").val());
+                    if(age>=65) old++;
+                    else if(20<=age && age<=64) adult++;
+                    else if(8<=age && age<=19) teen++;
+                    else if(1<=age && age<=7) child++
+                    else if(age==0){
+                        end=false; //if 단독문에서는 break 사용불가
+                        count--; // 0을 입력하면 카운팅이 되기때문에 count-1을 한다.
+                    }
+                    count++; 
+                    $("#result").html(
+                        `총원 ${count}명 : 노인${old}면, 성인${adult}명, 청소년${teen}명, 아동${child}명 `
+                    )
+                }
             }
-            var all = silver+adult+teen+child; 
-            document.write(`총원 ${all}명 : 노인 ${silver}명, 성인 ${adult}명, 청소년 ${teen}명, 아동 ${child}명`)
 
-
-      //  }
+            // linter 도구 자비스크립트 스타일가이드를 얼마나 준수해서 작성 확인 및 개선, 제안
+            // 구글 jslint 검색하면사이트 나온다. 여기에서 내가만든 코드를 입력하면 개선사항 제안은 준다.
+            // jshint 도 동일 한 사이트, 코드 품질을 알려줄뿐 계산식이 맞는지 등은 해당안된다.
+            // ESlint 도 유사한 사이트(비주얼 코드에 설치가능)
+            // prettier를 VS코드에 설치하면 코드색상을 설정할수있다.
+        //}
 
     </script>
 
     <style>
-       /* input{width:50px;} */
+       input{width:50px;} 
     </style>
 </head>
 <body>
-    <!-- <input type="text" id="num1">
-    <input type="text" id="num2">
+    <input type="number" id="age" min="0" max="110">
+    <button onclick="survey()">입력</button>
+
+    <!-- <input type="text" id="num2">
     <input type="text" id="num3">
-    <button onclick="find()">실행</button>
-    <div id="result"></div> -->
+    <button onclick="find()">실행</button> -->
+
+    <div id="result"></div>
     
 </body>
 </html>
