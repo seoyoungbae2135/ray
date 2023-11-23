@@ -118,7 +118,7 @@
 //     var score = prompt(subject[i]+"점수입력");
 // }
 
-// 입력박스 만들어서 점수입력 총점, 평균 출력 코드작성
+// 입력박스 만들어서 점수입력 총점, 평균 출력 코드작성 <body>태그의 <b id="subject"></b>
 
 // const subject=["국어","수학","영어","과학"];
 // let idx=0; //subject배열의 인덱스표현 변수
