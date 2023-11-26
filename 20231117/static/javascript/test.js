@@ -1,0 +1,44 @@
+var word ="member";
+var len = word.length;
+console.log(`${len}`);
+var at = word.charAt(3);
+console.log(at);
+word = "i like html";
+var idx = word.lastIndexOf("t");
+console.log(idx);
+var at = word.charAt(4);
+console.log(at);
+word = "i like html";
+var idx = word.indexOf("like");
+console.log(idx);
+if(word.indexOf("love")==-1){
+    console.log("love는 없다")
+}
+var idx = word.lastIndexOf("t");
+    console.log(idx);
+word = "i, like css";
+var word2 = word.replace("like", "love");
+console.log(word2);
+word2=word.replace("css","html");
+console.log(word2);
+word2 = word.replace(",", "");
+console.log(word2);
+word = "i like css like like";
+word2 = word.replace(/like/gi, "love");
+console.log(word2);
+word = "i-like-css-like";
+word2 = word.replace(/\-/g, " ");
+console.log(word2);
+const regex = /mango/;
+var test = "banana apple cat good nace good cat apple cat good";
+console.log(regex.test(test));
+//console.log(test.match(regex));
+//var name = regex.test(test);
+//console.log(name);
+word = "나는 20살입니다. \n전화번호는 010-1234-4321입니다.";
+console.log("원본:"+word);
+console.log(word.replace(/\-/g," "));
+console.log(word.replace(/\./g, ""));
+console.log(word.replace(/\s/g, ""));
+console.log(word.replace(/..살/g, "45살"));
+console.log(word.replace(/[0-9]{4}/, "xxxx"));

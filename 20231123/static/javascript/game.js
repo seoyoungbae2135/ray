@@ -24,12 +24,17 @@ $(function(){
         $(this).css("color","white");
         var idx = $(".numBox").index(this);   // 클릭을 하면 인덱스의 값을 idx에 저장
         board[idx]=0;  // board의 인덱스값이 0으로 변경
-        alert(board);
+        var num1 = [];
+        var num1 = num1.push(board.substring(0,5));
+        //alert(board);
         endgame();
     });
 
 });
 
 function endgame(){
-
+    for(var num1=0; num1<board.substring(0,5); num1++){
+        num1 = num1.push(board.substring(0,5))
+    }
+    alert(board);
 }

@@ -5,26 +5,26 @@
 
 // // 1.문자열의문자 갯수가 몇개냐? - length
 
-// // var word = "member";
-// // var len = word.length;
-// // console.log(`문자열 갯수 : ${len}`);
+// var word = "member";
+// var len = word.length;
+// console.log(`문자열 갯수 : ${len}`);
+//document.write(`문자열 갯수 : ${len}`);
 
 // // // 2. 문자열에서 한글자만 가져오기 - charAt() -> (메서드 라고 한다)
 
-// // var at = word.charAt(3);
-// // console.log(at);
+// var at = word.charAt(3);
+// console.log(at);
 
 // // //3. 문자열에서 특정문자또는 문자열이 있냐 어디에 있냐? - indexOf()
-// // word = "i like html";
-// // var idx = word.indexOf("like"); // 
-// // console.log(idx);
-// // if(word.indexOf("love")==-1){  //문자열에 검색문자또는 문자열이 없다면 -1
-// //     console.log("love는 없다");
-// // }
+word = "i like html";
+var idx = word.indexOf("like"); // 
+console.log(idx);
+if(word.indexOf("love")==-1){  //문자열에 검색문자또는 문자열이 없다면 -1
+    console.log("love는 없다");
+}
 // // //4. indexOf는 문자열의 첫번.째부터 검색을 하기때문에
 // // //  뒤쪽에 있는 문자나 문자열이 결과로 나오지 않을 수 있다
 // // // lastIndexOf() -> 문자열의 뒤쪽에서부터 검색
-
 // // // 5.replace -> 문자열에서 특정문자열을 다른문자열로 변경
 // // word = "i, like css";
 // // var word2 = word.replace("like", "love"); //원본은 바뀌지 않기때문에 변경하려는 문자는 다른변수에 저장해야한다
@@ -251,23 +251,23 @@
 //     // 고양이한테 야옹하면 대답은? 
 
 
-let info = "이순신:군인,34세,아산 - 장보고:군인,41세,완도 - 김춘추:정치인,28세,경주";
-let data =info.split(" - "); // - 의 간격을 띄우면 공백없이 split한다
+// let info = "이순신:군인,34세,아산 - 장보고:군인,41세,완도 - 김춘추:정치인,28세,경주";
+// let data =info.split(" - "); // - 의 간격을 띄우면 공백없이 split한다
 // 출력 - 이름 직업
-var 이순신_name = data[0].substring(0, data[0].indexOf(":")); //split(":");
-var 이순신_직업 = data[0].substring(data[0].indexOf(":")+1, data[0].indexOf(","));
+// var 이순신_name = data[0].substring(0, data[0].indexOf(":")); //split(":");
+// var 이순신_직업 = data[0].substring(data[0].indexOf(":")+1, data[0].indexOf(","));
 
-console.log(이순신_name+" "+이순신_직업);
+// console.log(이순신_name+" "+이순신_직업);
 
 //장보고의 나이는 몇인가? 
 // me
-var 장보고_name = data[1].substring(0, data[0].indexOf(":"));
-var 장보고_age = data[1].substring(data[1].indexOf(",")+1, data[1].indexOf("세") );
+// var 장보고_name = data[1].substring(0, data[0].indexOf(":"));
+// var 장보고_age = data[1].substring(data[1].indexOf(",")+1, data[1].indexOf("세") );
 
-console.log(장보고_name+" "+장보고_age);
-// teacher
-var age = data[1].substring(data[1].indexOf(",")+1, data[1].lastIndexOf(","));
-console.log(parseInt(age)); // 숫자만 추출 parseInt() - 앞쪽에 있는 숫자만 정수로 변환
+// console.log(장보고_name+" "+장보고_age);
+// // teacher
+// var age = data[1].substring(data[1].indexOf(",")+1, data[1].lastIndexOf(","));
+// console.log(parseInt(age)); // 숫자만 추출 parseInt() - 앞쪽에 있는 숫자만 정수로 변환
 
 
 
