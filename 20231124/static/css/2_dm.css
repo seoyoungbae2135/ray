@@ -1,0 +1,20 @@
+/*  2dm.css  */
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+#image{
+    width:200px;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+.pic{
+    width:25%;
+    height:50px;
+    overflow: hidden;
+    border:1px solid black;
+}
+.pic img{ width:100%;}

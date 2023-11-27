@@ -1,0 +1,47 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+ul,ol,dl{
+    list-style-type:none;
+}
+a{ text-decoration:none; color:inherit}  /*inherit 상속받는다는 명령어 부모태그의속성을 자식태그가 그대로 적용*/
+
+#Wrap{
+    width:1200px;
+    margin:0 auto;
+    position:relative;
+}
+
+#header{
+    width:100%;
+    padding:15px 0;
+    display:flex;
+    justify-content:space-between; /*양사이드로 배치  */
+}
+#nav{
+    width:60%;
+    font-size:20px;
+}
+.menuList{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+.menu{
+    padding:8px 10px;
+    border-bottom:5px solid #d10f0f;
+    border-bottom-left-radius:27px;
+}
+
+#sideMenu{
+    display:flex;
+    width:15%;
+    justify-content: space-between;  /*수평방향정렬*/
+    align-items:end;  /* 수직방향 정렬 */
+}
+#main{
+    padding:50px 0;
+    background:#fbfbf5;
+}
