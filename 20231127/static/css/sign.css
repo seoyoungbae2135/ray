@@ -1,0 +1,186 @@
+
+#signWrap{
+    width:600px;
+    margin:0 auto;
+}
+.pageTitle{
+    text-align:center;
+    padding:20px 0;
+}
+.sign_essential{
+    width:100%;
+    font-size:20px;
+    border-radius:10px;
+    padding:20px;
+}
+.input_field{
+    display:flex;
+    margin-bottom:10px;
+    column-gap: 15px;
+    align-items:center;
+}
+.input_field label{
+    width:130px;
+}
+.input_field input{
+    width:200px;     /* calc(100%-145px);*/
+    padding:7px 10px;
+    font-size:30px;
+}
+/* email input 태그만 선택
+    #myemail 또는 .input_field:nth-child(4) input 와 같이 선택해도되고
+*/
+.input_field input[type=email]{  /* 이렇게 선택해도된다 */
+    width:300px
+}
+#mypw::placeholder{
+    color:red;
+    font-size:15px;
+}
+label[for=myphone]{ /* label에 있는 for=myemail 만 선택 */
+    color:red
+}
+
+.sign_select{
+    width:100%;
+    padding:20px;
+    border-radius:10px;
+    margin-top:30px;
+}
+.select_input{
+    margin-bottom:10px;
+    /* align-items:center; */
+}
+
+.sign_select .select_input:nth-child(2){ 
+    position:relative;
+}
+
+#myname{
+    border:0;
+    outline:none;
+    background:inherit;
+    font-size:30px;
+    padding:8px 10px;
+    width:150px;
+}
+.select_input:nth-child(2) label{
+    position:absolute;
+    left:0%;
+    width:150px;
+    height:100%;
+    font-size:30px;
+    padding:8px 10px;
+    border-bottom:1px solid black;
+}
+
+.select_input:nth-child(2) label::after{ /* 가상선택자*/
+    content:"";
+    position:absolute;
+    left:0; bottom:-1px;
+    width:0; height:0;
+    border:3px solid skyblue;
+    transition: all 0.3s ease; /* 지정된시간동안  */
+}
+.select_input:nth-child(2) label span{
+    position:absolute;
+    left:0; bottom:5px;
+    transition: all 0.3s ease; /* 지정시간동안 변경되는 과정을 보여주는 명령어*/
+}
+#myname:focus + label span{
+    transform: translateY(-170%);
+    font-size:15px;
+}
+#myname:focus + label:after{
+    width:100%; transform: translateX(0);
+}
+
+.select_input:nth-child(3){
+    display:flex;
+    column-gap:15px;
+}
+#myaddr{
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:15px;
+    row-gap:10px
+}
+#pcode{
+    width:100px;
+    padding:5px 10px;
+}
+#pcode::-webkit-inner-spin-button{
+    appearance: none;
+    -moz-appearance: none; /*모질라에서 동작안되므로 빼준다*/
+    /* number타입의 updown버튼 나타나지않게 */
+}
+#addr{
+    width:100%
+}
+
+.select_input:nth-child(4){
+    display:flex;
+    column-gap:15px;
+    align-items:center;
+}
+.select_input:nth-child(4) label{
+    width:100px;
+}
+.ability-check{
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:5px;
+    row-gap:10px;
+}
+
+input[name="a"] +label{  /*checkbox를 없애고 메뉴를 직접 선택하도록 변경하기위한 태그 모양 제작 */
+    display:inline-block;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid black;
+    border-radius: 40px;
+}
+input[name="a"]{  
+    display:none;  /* checkbox를 감춘다*/
+}
+input[name="a"]:checked + label{   /* 선택하면 색이 변경되며 선택된다.(checkbox와 동일한 효과 */
+    background:salmon; 
+    color:white;
+}
+
+.select_input:nth-child(5){
+    position:relative;
+    width:150px;
+    height:35px;
+    border:2px solid lightcoral;
+    border-radius:5px;
+}
+#route{
+    appearance: none;
+    outline:none;
+    border:0;
+    width:100%;
+    background: transparent;
+    height:100%;
+    padding:0 5px;
+    z-index: 100;
+    position:relative;
+}
+.arrow{
+    position:absolute;
+    top:0;
+    right:0;
+    width:35px;
+    border-left:2px solid lightcoral;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition: all 0.3s ease; 
+}
+.arrow i{transition: all 0.3s ease;}
+#route:focus + .arrow i{
+    transform: rotate(180deg); 
+}
