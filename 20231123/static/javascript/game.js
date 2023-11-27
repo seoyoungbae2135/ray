@@ -32,9 +32,31 @@ $(function(){
 });
 
 function endgame(){
-    var num = board;
-    //var num1 = num.substring(0,5);
-    //num1.substring(0,5);
-    console.log(num.substring(0,5));
+    //var num1 = board.substring(0,5);
+    //for(var i=0; i<=board. )
+    if(board[0]==0){
+        var num1 = 1;
+    }
+    if(board[1]==0){
+        var num2 = 1;
+    }
+    if(board[2]==0){
+        var num3 = 1;
+    }
+    if(board[3]==0){
+        var num4 = 1;
+    }
+    if(board[4]==0){
+        var num5 = 1;
+    }
+    if(num1+num2+num3+num4+num5 == 5){
+        console.log("bingo");
+    }
+    // console.log(num1);
+    // console.log(num2);
+    // console.log(num3);
+    // console.log(num4);
+    // console.log(num5);
+
     //alert(board);
 }

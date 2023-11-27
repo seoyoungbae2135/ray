@@ -16,12 +16,12 @@
 // console.log(at);
 
 // // //3. 문자열에서 특정문자또는 문자열이 있냐 어디에 있냐? - indexOf()
-word = "i like html";
-var idx = word.indexOf("like"); // 
-console.log(idx);
-if(word.indexOf("love")==-1){  //문자열에 검색문자또는 문자열이 없다면 -1
-    console.log("love는 없다");
-}
+// word = "i like html";
+// var idx = word.indexOf("like"); // 
+// console.log(idx);
+// if(word.indexOf("love")==-1){  //문자열에 검색문자또는 문자열이 없다면 -1
+//     console.log("love는 없다");
+// }
 // // //4. indexOf는 문자열의 첫번.째부터 검색을 하기때문에
 // // //  뒤쪽에 있는 문자나 문자열이 결과로 나오지 않을 수 있다
 // // // lastIndexOf() -> 문자열의 뒤쪽에서부터 검색
@@ -114,13 +114,13 @@ if(word.indexOf("love")==-1){  //문자열에 검색문자또는 문자열이 �
 //     // console.log(name[3]);
 
 // // 7. 문자열 추출 - substring()
-//     // word = "nice123@naver.com";
-//     // var id = word.split("@")[0];
-//     // console.log(id);
+    word = "nice123@naver.com";
+    var id = word.split("@")[0];
+    console.log(id);
 
-//     // console.log(word.substring(0,7)); //0번째부터 7번 전까지 추출
-//     // console.log(word.substring(4)); // 4번째부터 끝까지 추출
-//     // console.log( word.substring(0, word.indexOf("@"))); //id 만 추출, 0번째부터 @전까지 추출
+    console.log(word.substring(0,7)); //0번째부터 7번 전까지 추출
+    console.log(word.substring(4)); // 4번째부터 끝까지 추출
+    console.log( word.substring(0, word.indexOf("@"))); //id 만 추출, 0번째부터 @전까지 추출
 
 //     // var birth = "19971209";
 //     // //생년원일중 몇월생 인지
