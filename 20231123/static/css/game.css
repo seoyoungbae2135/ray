@@ -58,6 +58,30 @@
 
 #result_modal{
     display:none;
+    width:100%;
+    position:fixed;
+    top:0; left:0;
+    height:100vh; /* viewport height - 화면높이 */
+    z-index:1000;
+}
+.modal_bg{
+    background:#555;
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0.5;  /*투명도*/
+}
+.result_detale{
+    position:absolute;
+    background:#eee;
+    width:500px;
+    height:200px;
+    border-radius:10px;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 
