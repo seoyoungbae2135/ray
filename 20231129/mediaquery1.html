@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+            미디어 타입 지정
+            all - 모든미디어 장치
+            screen - 컴퓨터기기, 모바일기기
+            print - 인쇄 용 기기
+            tv - tv와같은 장치
+            projection - 프로젝터용 기기
+            braille - 점자 표시 장치
+
+            조건
+            max- , min-, device-, 
+            max-width: 최대너비를 충족하는 조건, min-width: 최소너비를 충족하는 조건
+            max- max설정값 이하일 경우 조건충족(참) 되어 미디어쿼리 실행
+            min- min설정값 이상일 경우 조건 충족(참) 되어 미디어퀘리 실핼
+            device- device설정값에 정확하게 맞아 떨어질 경우 참
+            (모바일버전 부터 제작시 min, pc버전부터 제작시 max )
+            orientation : 화면 회전 조건 , (값:portrait(폭이좁을때), landscape(폭이 넓을때) pc,모바일 동일)
+            aspect-ratio : 화면비율 조건,
+                        aspect-ratio:1 -> 1:1비율
+                        aspect-ratio: 16/9 -> 16:9 비율
+                        
+            미디어 타입과 조건에 모두 충족한 경우  end 연산자 적용
+            미디어 타입과 조건중 하나만 충족한 경우  or 연산자 적용
+
+            @media 미디어타입 연산자 (조건){ 적용할 내용 css 코드 }
+
+            미디어쿼리로 반응형 사이트 제작시 너비 기준 사이즈
+            pc용 - 1024px 이상
+            태블릿 - 768 ~ 1023 px
+            스마트폰 - 480 px 이하
+            스마트폰(가로) - 480 ~ 767 px  
+        */
+        /* #box{
+            width:1000px; height:500px;
+            background:pink;
+        } */
+        /* @media all and (max-width:700px){  /*조건식을 넣지않으면 고정
+            #box{width:200px; height:700px;}
+        } */
+        /* @media (max-width:700px) or (max-height:300px) {  
+            #box{width:200px; height:700px;}
+        } */
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+
+</body>
+</html>
+
+<!--
+    mediaquery
+       media(미디어타입) - 기기의 종류(화면), 대중 전달용 매체
+                    pc용 화면-모니터, 모바일화면, 태블릿화면, 전광판, 키오스크 등
+        - 반응형 사이트 만들떄 사용
+
+    @mediaquery 
+
+-->

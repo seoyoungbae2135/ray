@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+
+        /* #wrap{
+            width:100%;
+            height:100%;
+            background:black;
+        } */
+
+        #space{
+            width:100px; height:800px;
+            top:100px;
+            left:400px;
+            /* background:black; */
+            display:flex;
+            flex-direction:column;
+            position:absolute;
+            animation:sun 4s linear infinite;
+        }
+        #sun{
+            width:100px; height:100px;
+            border-radius:100%;
+            flex-direction:column;
+            display:flex;
+            /* justify-content:center;
+            align-items:center; */
+            
+            margin-top:350px;
+            background:red; 
+        }
+         #cosmo{
+            width:50px; height:200px;
+            position:absolute;
+            display:frex;
+            margin-left:25px;
+            /* background:yellow; */
+            animation:earth 1s linear infinite;
+        }
+        #earth{
+            width:50px; height:50px;
+            border-radius: 100%;
+            margin-top:75px;
+            background:blue;
+        }
+        #moon{
+            width:25px; height:25px;
+            border-radius:100%;
+            margin-top: 80px;
+            background:black;
+            left:12px;
+            position:relative;
+        }
+
+        @keyframes sun{
+            0%{transform:rotate(0deg);}
+            100%{transform:rotate(360deg)}
+        }
+        @keyframes earth{
+            0%{transform:rotate(0deg);}
+            100%{transform:rotate(360deg)}
+        }
+
+
+
+    </style>
+
+<body>
+
+    <!-- <div id="wrap"> -->
+        <div id="space">
+            <div id="sun"></div>
+            <div id="cosmo">
+                <div id="earth"></div>
+                <div id="moon"></div>
+            </div>
+        </div>
+    <!-- </div> -->
+    
+</body>
+</html>
