@@ -1,0 +1,119 @@
+/*  mediaquery1.html link
+
+    단위
+    절대값 - px, pt, cm, mm, in
+    상대값 - vh(viewport의 영향을 받는다), %, vm(viewport의 영향을 받는다), em, rem, vmin, vmax
+
+        em, rem -> 글꼴 크기
+            font-size -> 10px;
+            1em -> 10px
+            1.5em -> 15px
+            3em -> 30px
+        em : 상위 태그(부모태그) 기준적용
+        rem : 최상위태그(html 태그) 기준적용
+*/
+
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{font-size:16px;}
+ul{ list-style: none;}
+img{width:100%;}
+
+#wrap{
+    width:100%;
+    max-width:1400px; /* 브라우저가 1400px이상이 되어도 1400px 이상 커지지않는다 */
+    /* min-width:700px;  700px이하로 줄지 않는다*/
+    margin:0 auto; 
+}
+
+#header{
+    width:100%;
+    background:orange;
+    padding:10px 0;
+    display:flex;
+    align-items:center;
+}
+#nav{
+    width: calc(100% - 50px);
+    background:green;
+    height:30px;
+}
+.logo{
+    width:50px;
+    background:firebrick;
+    height:50px;
+}
+#main{
+    padding:50px 0;
+    background:khaki;
+    width:100%;
+}
+.content{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:20px;
+    justify-content:center;
+}
+.item{
+    width:30%;
+}
+#footer{
+    width:100%;
+    padding:20px 50px;
+    background:lawngreen;
+    position:relative;
+}
+.addr{
+    width:70%; height:20px;
+    background:darkgoldenrod;
+}
+.tel{
+    width:30%; height:20px;
+    background:rebeccapurple;
+}
+#footer .logo{
+    position:absolute;
+    right:50px;  /*footer에 있는 패딩값만큼 준다*/
+    top:20px;
+}
+
+/*태블릿용*/
+@media screen and (max-width:1024px){
+    /*max-width:1024px -> 화면 너비가 1024px 이하일때*/
+    
+    #nav{ order:2; } /*display:none; 화면에 띄우지 않을때 적용*/
+    .logo{
+        width:100px;
+        height:100px;
+        order:1;
+    }
+    .item{
+        width:45%;
+    }
+    #footer .logo{
+        width:30px;
+        height:30px;
+    }
+
+/* 스마트폰용(세로) */
+
+    @media screen and ( max-width:480px){
+        #header{
+            justify-content:space-between;
+        }
+        #nav{
+            width:50px;
+        }
+        .item{
+            width:90%;  /*스마트폰에서 item 태그를 한줄로 보이게 한다 */
+        }
+    }
+
+    
+}

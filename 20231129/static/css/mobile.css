@@ -1,0 +1,34 @@
+/*mediaquery2 link*/
+*{
+    padding:0;
+    margin:0;
+    boxsizeing:border-box;
+}
+ul{ list-style-type: none;}
+img{width:100%;}
+
+#wrap{
+    width:90%; /*갤럭시에서는 엣지부분 때문에 90%로 설정하여 엣지안에서 보이게 하기위하여 90%로한다*/
+    min-width:315px; /*모바일 기준이므로 min-width로 한다*/
+    margin:0 auto;
+}
+
+#header{
+    width:100%;
+    padding:10px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.pc_search{
+    display:none;
+}
+#nav{
+    display:none;
+}
+#header .logo{
+    width:60px; height:50px;
+    background:#FFEAEA;
+}
+.mobile_menu{font-size:2rem;}
+.mobile_search{font-size:2em;}
