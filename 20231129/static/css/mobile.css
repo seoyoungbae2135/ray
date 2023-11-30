@@ -2,13 +2,15 @@
 *{
     padding:0;
     margin:0;
-    boxsizeing:border-box;
+    box-sizing:border-box;
 }
+
+html{font-size:10px;}
 ul{ list-style-type: none;}
 img{width:100%;}
 
 #wrap{
-    width:90%; /*갤럭시에서는 엣지부분 때문에 90%로 설정하여 엣지안에서 보이게 하기위하여 90%로한다*/
+    width:90%; /*갤럭시에서는 엣지부분 때문에 90%로 설정하여 평면에서 보이게 한다*/
     min-width:315px; /*모바일 기준이므로 min-width로 한다*/
     margin:0 auto;
 }
@@ -19,6 +21,7 @@ img{width:100%;}
     display:flex;
     justify-content:space-between;
     align-items:center;
+    font-size:30px;
 }
 .pc_search{
     display:none;
@@ -32,3 +35,144 @@ img{width:100%;}
 }
 .mobile_menu{font-size:2rem;}
 .mobile_search{font-size:2em;}
+
+#main{
+    width:100%; 
+    padding:50px 0;
+    background:pink;
+}
+.content{
+    width:100%;
+    padding:0 10%;
+
+}
+/* .item{
+    margin-top:20px; /*간격띄우기는 하위태그에서 해야한다
+} */
+
+#footer{
+    width:100%;
+    background:dodgerblue;
+    padding:50px; /* 크기를 주지않았기때문에 패딩을 주어야 보이게 된다*/
+    position:relative;
+}
+.addr, .tel{
+    height:2rem;
+    background:antiquewhite;
+    width:60%;
+    position:relative;  /*상위태그에 공간을 주지않았을때는 2개 태그 이므로  absolute를 사용할 수 없다 */
+    left:40%;
+}
+#footer .logo{
+    height:4rem;
+    width:4rem;
+    background:black;
+    position:absolute; /* 단독태그이므로 absolute사용하여 상위태그에 구애받지않고 위치 지정 */
+    top:50px;
+}
+
+/*태블릿용*/
+@media screen and (min-width:768px){
+    html{font-size:15px;}
+    #header{font-size:20px;}
+    .content{
+        display:flex;
+        flex-wrap:wrap;
+        padding:0;
+        justify-content: center; /* 이미지간 간격을 주기위하여 사용*/
+        gap:20px; /* 이미지간 간격을 일정하게 준다*/
+    }
+    .tiem{
+        margin:0;
+        width:45%
+    }
+}
+
+/* pc용 */
+@media screen and (min-width:1024px){
+    .mobile_menu, .mobile_search{
+        display:none;
+    }
+    .pc_search, #nav{
+        display:block; /* pc용 부분이 보이도록 한다 */
+        width:35%;
+    }
+    .pc_search input{
+        height:30px;
+        padding-left:8px;
+        font-size:1.5em;
+        width:8em;
+    }
+    #nav ul{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .menu{
+        width:70px;
+        height:25px;
+    }
+
+    /* 
+        이미지 배치 - 한줄에 3장, 이미지사이 간격은 25px
+        footer 
+            - addr, tel을 한줄에 배치, footer기준 왼쪽에 배치
+            - logo는 addr,tel 및에 배치, 이전 크기대비 2배 사이즈업
+    */
+    /*me*/
+    /* #main{
+        padding:50px 0;
+        width:100%;
+    }
+    .content{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        column-gap:25px;
+        justify-content:center;
+    }
+    .item{
+        width:30%;
+    }
+
+    #footer{
+        width:100%;
+        padding:20px 20px;
+        position:relative; 
+    }
+    .addr{
+        width:60%; height:20px;
+        background:#eee;
+    }
+    .tel{
+        width:30%; height:20px;
+        background:#ddd;
+        /* position:absolute;
+        left:0; 
+    } */
+    /*teacher*/
+    .content{
+        gap:25px;
+    }
+    .item{
+        width:30%;
+    }
+    #wrap{
+        max-width:1400px;
+    }
+    #footer{
+        display:flex;
+    }
+    .addr, .tel{
+        width:35%;
+        left:0;  /* 왼쪽에 배치를 위하여 모바일에서 left:40%를 없애야한다*/
+    }
+    #footer .logo{
+        width:8rem; height:8rem;
+        position:relative; /* 모바일에서 position:absolute로 되어있기때문에 바꿔야한다 */
+        top:2rem;
+        right:70%; /*좌측으로 이동 addr 35% + tel 35% 이므로 70% 이동*/
+    }
+
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container1{
+            width:1000px;
+            height:500px;
+            border:3px solid black;
+            display:grid;
+            grid-template-columns:repeat(3, 200px);
+            grid-auto-rows:50px;
+            align-content:space-around;  /*start:세로축의 좌,상단 정렬, center:좌측중앙정렬, end:세로축의 좌하단 정렬, space-around:중앙 일정간격 축방향 정렬(상하 양끝 간격은 약간 좁다)*/
+        }
+    </style>
+
+</head>
+<body>
+    <h3> grid 정렬 - justify(가로축), align(세로축) </h3>
+    <div id="container1">
+        <div class="item" style=background:red>1</div>
+        <div class="item" style=background:blue>2</div>
+        <div class="item" style=background:orange>3</div>
+        <div class="item" style=background:yellow>4</div>
+        <div class="item" style=background:green>5</div>
+        <div class="item" style=background:blueviolet>6</div>
+        <div class="item" style=background:chartreuse>7</div>
+    </div>
+</body>
+</html>

@@ -21,7 +21,15 @@
     box-sizing:border-box;
 }
 html{font-size:16px;}
-ul{ list-style: none;}
+ul{ 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style: none;
+}
+.menu{
+    padding:3px 10px;
+}
 img{width:100%;}
 
 #wrap{
@@ -42,6 +50,7 @@ img{width:100%;}
     width: calc(100% - 50px);
     background:green;
     height:30px;
+
 }
 .logo{
     width:50px;
@@ -109,6 +118,12 @@ img{width:100%;}
         }
         #nav{
             width:50px;
+        }
+        ul{
+            display:none;
+        }
+        ul{
+            
         }
         .item{
             width:90%;  /*스마트폰에서 item 태그를 한줄로 보이게 한다 */
