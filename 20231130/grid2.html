@@ -54,6 +54,26 @@
         }
 
         /* 과제 : grid로 배치하기 1~8 간격 및 크기는 자유*/
+        /*2023-11-30 report */
+        #container2{
+            width:800px;
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            grid-auto-rows:80px;
+            gap:10px;
+        }
+        #container2 .item:nth-child(1){
+            grid-row:1/5;
+        }
+        #container2 .item:nth-child(5){
+            grid-column:3/5;
+            grid-row:2/4;
+        }
+        #container2 .item:nth-child(8){
+            grid-column:2/5;
+        }
+
+
         
     </style>
 
@@ -68,6 +88,18 @@
         <div class="item" style=background:green>5</div>
         <div class="item" style=background:blueviolet>6</div>
         <div class="item" style=background:chartreuse>7</div>
+    </div>
+
+    <h3> 2023.11.30 grid report </h3>
+    <div id="container2">
+        <div class="item" style=background:red>1</div>
+        <div class="item" style=background:blue>2</div>
+        <div class="item" style=background:orange>3</div>
+        <div class="item" style=background:yellow>4</div>
+        <div class="item" style=background:green>5</div>
+        <div class="item" style=background:blueviolet>6</div>
+        <div class="item" style=background:chartreuse>7</div>
+        <div class="item" style=background:khaki >8</div>
     </div>
 </body>
 </html>
