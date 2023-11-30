@@ -12,9 +12,49 @@
             border:3px solid black;
             display:grid;
             grid-template-columns:repeat(3, 200px);
-            grid-auto-rows:50px;
-            align-content:space-around;  /*start:세로축의 좌,상단 정렬, center:좌측중앙정렬, end:세로축의 좌하단 정렬, space-around:중앙 일정간격 축방향 정렬(상하 양끝 간격은 약간 좁다)*/
+            /* grid-auto-rows:50px; */
+            /*align-content:center;  /*start:세로축의 좌,상단 정렬, center:좌측중앙정렬, end:세로축의 좌하단 정렬, space-around:중앙 일정간격 축방향 정렬(상하 양끝 간격은 약간 좁다), stretch:*/
+            /* justify-content:space-between; */
+            /*place-content: center space-around; /*align 과 justify를 동시에 구현, 순서는 align의위치 justify의 위치 순서로 입력 */
+               /* content -> 정렬대상 : 아이템 그룹
+                                행단위 정렬은 align-content
+                                열단위 정렬은 justify-content
+               
+               */ 
+            /*align-items:center; /* 셀내에서 아이템 정렬 */
+            /* justify-items:end; */
+            /*place-items:center center; /*align 과 justify를 동시에 구현, 순서는 align의위치 justify의 위치 순서로 입력 */
+            /*items는 정렬대상이 각 셀안에 있는 아이템이다
+                그리드라인으로 감싸져있는 영역은 셀이라고한다.
+                셀내부에 존재하는 태그를 아이템이라고한다.
+                place-items는 아이템 개별적으로 셀 내부에서 정렬하는 방법
+            */
         }
+
+        #container1 .item{
+            /* width:100px; height:100px; */
+        }
+        #container1 .item:nth-child(1){
+            order:4;  /* 위치만 바꾼다*/
+        }
+        #container1 .item:nth-child(2){
+            order:2;  /* 위치만 바꾼다*/
+        }
+        #container1 .item:nth-child(5){
+            order:1;  /* 위치만 바꾼다*/
+        }
+        #container1 .item:nth-child(3){
+            grid-column:1/3;
+            grid-row:1/2
+        }
+        #container1 .item:nth-child(4){
+            grid-column:2/3;
+            grid-row:1/2;
+            z-index:1000; /*zindex를 사용하면 z방향으로 겹치게 된다*/
+        }
+
+        /* 과제 : grid로 배치하기 1~8 간격 및 크기는 자유*/
+        
     </style>
 
 </head>
