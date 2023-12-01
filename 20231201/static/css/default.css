@@ -1,0 +1,148 @@
+/* */
+
+:root{
+    --bg-color:#222845; /* 전체배경색 (color를 정하여 변수로 만든 것, bg-color가 변수
+                                  여기서 color를 바꾸면 변수로사용한 모든 부분이 바뀐다.) */
+    --font-color:#cbcbcb; /*기본텍스트색상 (변수이름 만들때는 하이픈2개 붙여서 만든다*/
+    --box-color:#747474; /*컨텐츠 배경색*/
+    --bt-color:#2f9d27; /*버튼배경색*/
+    --menu-color:#8c8c8c; /*메뉴배경색*/
+    --menu-hover-color:#f2cb61; /*메뉴 마우스 오버 색상*/
+    --font-size:1.2rem; /*html font 크기(16px)의 1.2배*/
+    --title-size:2.5rem;
+    --content-size:1.5rem;
+    --sub-size:1.9rem;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: var(--bg-color);  /*var(--변수이름) 이렇게 적용*/
+    font-size:var(--font-size);
+    color:var(--font-color);
+}
+ul, ol{
+    list-style:none;
+}
+a {
+    text-decoration:none;
+    color:inherit; /*폰트색을 상속받는다*/
+}
+span,b,i,strong{ display:inline-block} /*<span>으로 묶은곳  */
+table{
+    border-collapse:collapse; /* 간격제거 */
+    text-align:center;
+} 
+input[type=text], input[type=password], input[type=email], input[type=number] {
+    padding:5px 10px;
+    outline: none;
+    border:0;
+    font-size:var(--content-size);
+    background:#ffbb00;
+}
+button, input[type=button], input[type=submit]{
+    border:0;
+    background-color:var(--bt-color);
+    font-size:var(--sub-size);
+    border-radius:10px;
+}
+img{width:100%;}
+/*여기까지 기본적인 적용*/
+
+#wrap{
+    width:100%;
+    position:relative;
+}
+#top{
+    width:1200px;
+    padding:5px 20px;
+    margin:0 auto; /*반드시 폭을 지정해야한다*/
+}
+#top .topMenu{
+    width: 100%;
+    display: flex;
+    justify-content: end; /* 우측 끝으로 이동 */
+    font-size: .7rem;
+}
+#top .topMenu span{
+    padding:0 15px; /*top 메뉴 간격 설정 */
+}
+#top .topMenu span:nth-child(2){  
+    border-left:2px solid var(--font-color); /*top메뉴 사이에 라인 삽입 */
+    border-right:2px solid var(--font-color); /*회원가입 태그 양쪽에만 라인 삽입 */
+}
+
+#header{
+    width:100%;
+    border-top:2px solid #ffbb00;
+    border-bottom: 1px solid var(--font-color);
+    padding:10px 0;
+}
+#header #nav{
+    width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#header #nav .logo{
+    width:70px; height:70px;  /*태그의 크기가 이미지보다 작으면 이미지의 일부분만 나온다*/
+    background: url(../image/망고.jpg) no-repeat; /*삽입할 이미지 경로를 ulr로 지정 ../는 상위폴더 지정 no-reoeat는 이미지가 반복하지않도록 설정*/
+    background-size:contain;  /*background이미지의 사이즈를 조정하여 태그크기에 맞도록 설정*/
+}
+#header #nav .menu{
+    width:900px;
+    position:relative;
+}
+#header #nav .menu .menuList{
+    width:100%;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.menuList .menuItem{
+    cursor: pointer;
+    position:relative;
+    padding:20px 5px;
+}
+.menuList .menuItem .subMenu{  /* 서브메뉴를 배치*/
+    display:none; 
+    position:absolute;
+    top:80px;
+    width:130px;
+    font-size:1rem;
+}
+.menuList .menuItem .subMenu .subItem{
+    line-height:30px
+}
+/* .menuList .menuItem .subMenu{
+    position:absolute;
+    width:130px;
+    font-size:1rem; 
+    opacity:0; /*서브메뉴 감추기 투명도를 최대로하여 
+}
+.menuList .menuItem .subMenu .subItem{
+    position:absolute;
+    line-height:0; /*줄간격을 0으로하여 한곳으로 뭉친다, 이후 클릭시 펼쳐지게 한다
+    top:-10px /*메인메뉴 글씨안으로 들어가게 한다
+}
+.menuList .menuItem:hover .subMenu{ /*마우스가 위치하면
+    opacity:1;  /*서브메뉴가 보이도록
+}
+.menuList .menuItem:hover .subMenu .subItem{
+    line-height:30px;
+    top:40px;
+    position:relative;
+} */
+
+#footer{
+    width:100%;
+    background:#222845e0;
+    padding:70px 0 50px 0;
+    text-align: center;
+}
