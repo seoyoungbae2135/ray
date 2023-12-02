@@ -4,16 +4,16 @@ let slide_idx=0;
 
 
 $(function(){
-    $(".menuList>.menuItem").on("mouseover",function(){ // 메뉴리스트의 메뉴아이템에 마루스를 올리면
-        $(this).children(".subMenu").slideDown(); //메뉴아이템(this)아래 서브메뉴를 보여라
+    //$(".menuList>.menuItem").on("mouseover",function(){ // 메뉴리스트의 메뉴아이템에 마루스를 올리면
+    //    $(this).children(".subMenu").slideDown(); //메뉴아이템(this)아래 서브메뉴를 보여라
         // show(), hide(), toggle();
         //fadeIn(), fadeOut(), fadeToggle
         //slideDown(3000) -> 밀리초, slideUp, slideToggle()
-    });
+    //});
 
-    $(".menuList>.menuItem").on("mouseout",function(){ // 마우스가 벗어나면 
-        $(this).children(".subMenu").slideUp();  // 서브메뉴가 숨겨진다
-    });
+    //$(".menuList>.menuItem").on("mouseout",function(){ // 마우스가 벗어나면 
+    //    $(this).children(".subMenu").slideUp();  // 서브메뉴가 숨겨진다
+    //});
 
 
     // 슬라이드이미지 구현
@@ -38,14 +38,14 @@ $(function(){
     // setInteval( 실행할 내용(함수), 시간(밀리세컨드)); 
     setInterval(
         function(){
-            if(slide_idx != $(".slideImg").length-1){
+            if(slide_idx != $(".slideImg").length-1){ //마지막이미지일 경우 이동불가
                 slide_idx++;
                 $(".slideList").css("right",(slide_idx*1200)+"px"); 
             }else{
                 slide_idx=0;
                 $(".slideList").css("right",(slide_idx*1200)+"px");
             }
-        } , 2000
+        } , 5000
     );
 
     // function save(){   } 이함수는 save라는 이름이 있는 함수 - 다른곳에서 사용가능

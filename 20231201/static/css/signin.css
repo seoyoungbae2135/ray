@@ -27,14 +27,14 @@ label{
 }
 #loginWrap .loginBox{
     width:100%;
-    padding:10px 0;
+    padding:20px 0;
     position:relative;
 }
 /* <form 태그는 스타일 하지 않는다*/
 #loginWrap .loginBox .login{
     line-height:65px;
     width:100%;
-    border: 1px solid #fff;
+    border: 30px solid #fff;
     padding:20px;
 }
 .login .loginId, .login .loginPw{
@@ -43,11 +43,11 @@ label{
     justify-content: space-between;
 }
 .loginId #id, .loginPw #pw{
-    order:1;
+    /* order:1; */
     width:80%;
     height:55px
 }
-.loginId .label, .loginPw label{
+.loginId label, .loginPw label{
     width:20%;
     text-align: center;
     font-size:var(--title-size);

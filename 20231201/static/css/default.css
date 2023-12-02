@@ -21,7 +21,7 @@
 }
 
 body{
-    background-color: var(--bg-color);  /*var(--변수이름) 이렇게 적용*/
+    background-color: var(--bg-color);  /*var(--변수이름) root의 변수를 이렇게 적용*/
     font-size:var(--font-size);
     color:var(--font-color);
 }
@@ -81,6 +81,10 @@ img{width:100%;}
     border-top:2px solid #ffbb00;
     border-bottom: 1px solid var(--font-color);
     padding:10px 0;
+    background:#222845ad;
+    position:sticky;  /* 헤더가 상단에 고정되고 스크롤시 헤더바탕이 투명해져 메인이 비쳐보인다 */
+    top:0;
+    z-index:1000;
 }
 #header #nav{
     width:1200px;
@@ -92,7 +96,7 @@ img{width:100%;}
 #header #nav .logo{
     width:70px; height:70px;  /*태그의 크기가 이미지보다 작으면 이미지의 일부분만 나온다*/
     background: url(../image/망고.jpg) no-repeat; /*삽입할 이미지 경로를 ulr로 지정 ../는 상위폴더 지정 no-reoeat는 이미지가 반복하지않도록 설정*/
-    background-size:contain;  /*background이미지의 사이즈를 조정하여 태그크기에 맞도록 설정*/
+    background-size:cover;  /*background이미지의 사이즈를 조정하여 태그크기에 맞도록 설정*/
 }
 #header #nav .menu{
     width:900px;
@@ -110,7 +114,7 @@ img{width:100%;}
     position:relative;
     padding:20px 5px;
 }
-.menuList .menuItem .subMenu{  /* 서브메뉴를 배치*/
+/* .menuList .menuItem .subMenu{  /* 서브메뉴를 배치
     display:none; 
     position:absolute;
     top:80px;
@@ -119,30 +123,31 @@ img{width:100%;}
 }
 .menuList .menuItem .subMenu .subItem{
     line-height:30px
-}
-/* .menuList .menuItem .subMenu{
+} */
+.menuList .menuItem .subMenu{
     position:absolute;
     width:130px;
     font-size:1rem; 
-    opacity:0; /*서브메뉴 감추기 투명도를 최대로하여 
+    opacity:0; /*서브메뉴 감추기 투명도를 최대로하여 */
 }
 .menuList .menuItem .subMenu .subItem{
     position:absolute;
-    line-height:0; /*줄간격을 0으로하여 한곳으로 뭉친다, 이후 클릭시 펼쳐지게 한다
-    top:-10px /*메인메뉴 글씨안으로 들어가게 한다
+    line-height:0; /*줄간격을 0으로하여 한곳으로 뭉친다, 이후 클릭시 펼쳐지게 한다*/
+    top:-10px; /*메인메뉴 글씨안으로 들어가게 한다*/
+    background:#222845ad;
 }
-.menuList .menuItem:hover .subMenu{ /*마우스가 위치하면
-    opacity:1;  /*서브메뉴가 보이도록
+.menuList .menuItem:hover .subMenu{ /*마우스가 위치하면*/
+    opacity:1;  /*서브메뉴가 보이도록*/
 }
 .menuList .menuItem:hover .subMenu .subItem{
     line-height:30px;
     top:40px;
     position:relative;
-} */
+}
 
 #footer{
     width:100%;
-    background:#222845e0;
+    background:#383e5e;
     padding:70px 0 50px 0;
     text-align: center;
 }
