@@ -34,7 +34,7 @@ label{
 #loginWrap .loginBox .login{
     line-height:65px;
     width:100%;
-    border: 30px solid #fff;
+    border: 3px solid #fff;
     padding:20px;
 }
 .login .loginId, .login .loginPw{
@@ -43,9 +43,9 @@ label{
     justify-content: space-between;
 }
 .loginId #id, .loginPw #pw{
-    /* order:1; */
+    order:1;
     width:80%;
-    height:55px
+    height:40px
 }
 .loginId label, .loginPw label{
     width:20%;

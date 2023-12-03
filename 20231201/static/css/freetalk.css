@@ -1,0 +1,61 @@
+/* freetalk.html link 2023-12-01 report*/
+
+#main{
+    width:1200;
+    margin:0 auto;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    padding:50px 100px;
+}
+#sch{
+    width:700px;
+    margin:0 auto;
+    border:1px solid #fff;
+}
+#in{
+    width:90%
+}
+#in + label{
+    display:inline-block;
+    width:8%;
+    text-align:center;
+}
+input[type=text]{
+    border:1px solid #fff;
+}
+#box{
+    border-collapse:collapse;
+    width:900px;
+    margin:0 auto;
+    margin-top:100px;
+}
+#box tr th{
+    border:1px solid #fff;
+    text-align:center;
+}
+#box .num{
+    width:100px;
+    height:40px;
+}
+#box .title{
+    width:500px;
+}
+#box .name{
+    width:150px;
+}
+#box .date{
+    width:150px;
+}
+#box tr td{
+    text-align:center;
+    height:40px;
+    border:1px solid #fff;
+}
+#box .numTd{
+    font-weight:800;
+}
+#box .titleTd{
+    padding-left:20px;
+    text-align:left;
+}
