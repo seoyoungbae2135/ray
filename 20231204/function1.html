@@ -90,9 +90,9 @@
         //     document.getElementById("res").innerHTML = result;
         // }
 
-        // $(function(){ //window.onload+function(){} - html문서가 브라우저에 모두 로드되면 
+        $(function(){ //window.onload+function(){} - html문서가 브라우저에 모두 로드되면 
 
-        // });
+       
 
 
 
@@ -100,7 +100,7 @@
 
         // function avg(){  // 다른곳에 있는 값을 넘겨받는 경우 전역변수를 사용할 수 없다
         //     var k = praseInt( document.getElementById("num1").value ); // javascript로 num1 값을 가져오는 코드
-        //     var m = parseInt( $("num20").val()); // jquery 로 num2 값을 가져오는 코드
+        //     var m = parseInt( $("#num2").val()); // jquery 로 num2 값을 가져오는 코드
         //     var e = parseInt( document.querySelector("#num3").value); // 위와 동일한 명령어 
 
         //     var tot = total(k,m,e); // 합계값구하는 함수를 가져와야 한다.
@@ -124,19 +124,19 @@
         //     }
         // }
         // teacher
-        function dan(end){
-            var num = Number($("#gugu").val())
-            for( var i=1; i<=end; i++){
-                $("#gugudan").append(`${num}*${i} = ${num*i} <br>`)
-            }
-        }
+        // function dan(end){
+        //     var num = Number($("#gugu").val())
+        //     for( var i=1; i<=end; i++){
+        //         $("#gugudan").append(`${num}*${i} = ${num*i} <br>`)
+        //     }
+        // }
 
 
         // 민수가 혈당을 체크하였다
-            //혈당수치에 따라 구분ㄹ하여 출력하시오
+            //혈당수치에 따라 구분 하여 출력하시오
             // 70~100일경우 공복혈당
             //90~140일경우 식후 2시간 혈당
-            //정상혈당 수치는 70~100, 90~140이다 전상수치보다 5.7%미만이면 
+            //정상혈당 수치는 70~100, 90~140이다 정상수치보다 5.7%미만이면 
             //당화 혈색소라고 출력
             //input태그값 가져오는 함수 수치에 따라 결과출력하는 합수
 
@@ -148,12 +148,36 @@
         // 25이상은 비만
 
     // 하나는 onclick으로 하나는 함수내에서 또다른 함수실행으로
+    // 2023.12.04 report
+
+    function check(){
+        var value = Number($("#blood").val);
+        if(value >= 70 && value <= 100){
+            document.write("공복혈당<br>");
+        }else if(value >= 90 && value <= 140){
+            document.write("식후 2시간 혈당<br>");
+        }else if(value < (70 - (70 * 0.057))){
+            document.write("당화혈색소<br>");
+        }
+    }
 
 
+
+});
     </script>
 
 </head>
 <body>
+
+    <input type="text" id="blood">
+    <button onclick="check()">입력</button>
+    <div id="bloodsugar"></div>
+
+    <input type="text" id="bmi">
+    <button oneclick=""
+
+
+
 
     <!-- <button onclick="plus(10,20,30)">함수실행</button>  
     <button onclick="prints()">결과출력</button>
@@ -165,13 +189,13 @@
 
     <button onclick="avg()">성적 평균 계산</button> -->
 
-    <br><br>
+    <!-- <br><br> -->
 <!--input#gugu 입력한 숫자에 맞는 구구단 출력하는 함수 만들기
         매개변수 숫자까지의 구구단 만 출력
 -->
-    <input type="text" id="gugu">
+    <!-- <input type="text" id="gugu">
     <button onclick="dan(7)">구구단 출력</button>
-    <div id="gugudan"></div>
+    <div id="gugudan"></div> -->
 
 </body>
 </html>
