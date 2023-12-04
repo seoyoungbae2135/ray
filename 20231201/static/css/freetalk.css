@@ -4,8 +4,8 @@
     width:1200;
     margin:0 auto;
     position:relative;
-    justify-content:center;
-    align-items:center;
+    /* justify-content:center; */
+    /* align-items:center; */
     padding:50px 100px;
 }
 #sch{
