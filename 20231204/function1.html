@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+    <script>
+        // function - 함수(독립적으로 기능을 실행), 메서드(종속 되어있는 기능을 가진 함수)
+        // b밑에 c라는 메서드가 존재한다면,
+        // b를 프로그램 실행과 함께 같이실행해주면 c메서드도 함께 램에 로드된다.
+        // a라는 함수는 자신이 실행될 때만 로드된다.
+        // c라는 메서드를 실행하려면 b가 필요하다. b를 미리 로드시켜주면 a함수보다 더욱 빠르게
+        // 실행이 가능하다. 다만 b가 반드시 존재해야지만 실행할 수 있다
+
+        // function 함수이름() {함수내용}
+        // 함수-재사용, 수정, 모듈화
+        // 함수를 사용하는 이유는 개발자 편의를 위해
+        // 자바스크립트 작성시 분할(함수로 분리)해서 작업하는 습관 들이기
+
+        //함수의 4가지 형태
+
+        // function 함수이름(입력변수(매개변수 또는 인자)){ 함수내용; 반환값(return);}
+        // 매개변수 - 함수가 실행되기위한 반드시 필요한값을 저장하는 변수 - 입력값
+        // 반환값(return) - 함수가 실행이 되서 나온 결과값
+        // 함수를 실행하려면 함수이름();라는 코드를 작성해야 함수가 실행된다.
+        // 함수를 만드려면 먼저 왜 무었때문에 함수를 만드는지 알아야 한다.
+        // 왜 함수를 구현해야 하는가???
+        // 빙고게임을 만든다면 빙고게임판을 그리는 함수, 빙고게임 5줄 빙고 체크하는 함수
+        // 빙고게임판 클릭처리하는 함수
+
+
+        // function a(){  //두개의 정수 합을 구하는 함수
+        //     var a=prompt();  //입력값을 바꿔가며 계산한다면
+        //     var b=prompt();
+        //     console.log(a+b) 
+            //console.log(10+20);  // 계산만 할 것인가?, 출력도 할 것인가? 
+
+        //}
+        // 계산을 5번 반복한다면
+        // for(var i=0; i<=5; i++)
+        //     a();
+        //함수의 형태 1. 매개변수가 있고 반환이 없는 함수
+        // function a( aa, b, c){   // 매개변수(인자)를 입력하여 
+        //     console.log( aa+b ) // 인수의 합을 구하려면
+        // }
+        // a(10,20,30) //인수
+        //인수와 인자는 1:1 매칭되어 저장된다.
+
+        // arr.indexOf("김유신"); 매개변수:김유신, indexOf : 메서드
+
+        // focus(); 매개변수 없이 동작하는 메서드
+
+        //함수의형태 2. 매개변수, 반환이 없는 함수
+        // function b(){
+        //     var num=10;
+        //     console.log(num*2);
+        // }
+        // b();
+
+        //함수의형태 3. 매개변수 없고 반환은 있는 함수
+        // function c(){
+        //     var num=10, num1=20;
+        //     var result = num + num1;
+        //     return result; // return은 함수가 실행된 곳으로 데이터를 보낸다. 
+        // }
+        // console.log(result) //함수 바깥에서 result를 사용 할 수없다, 에러발생
+        // var res = c() // c함수의 결과값을 변수 res에 저장
+        // consolw.log(res); 
+
+        //함수의형태 4. 매개변수와 반환이 있는 함수
+        // function indexof(data){
+
+        //     return 11;
+        // }
+
+        //함수가 가진 데이터를 함수밖으로 보내는 방법
+        //return을 활용하여 반환값 처리하기
+        //전역변수를 사용;
+
+        // let result=0; //전역변수
+
+        // function plus( num1, num2 ,num3 ){  // 함수 정의
+        //     result = num1 + num2 + num3;
+        // }
+        // function prints(){
+        //     document.getElementById("res").innerHTML = result;
+        // }
+
+        // $(function(){ //window.onload+function(){} - html문서가 브라우저에 모두 로드되면 
+
+        // });
+
+
+
+
+
+        // function avg(){  // 다른곳에 있는 값을 넘겨받는 경우 전역변수를 사용할 수 없다
+        //     var k = praseInt( document.getElementById("num1").value ); // javascript로 num1 값을 가져오는 코드
+        //     var m = parseInt( $("num20").val()); // jquery 로 num2 값을 가져오는 코드
+        //     var e = parseInt( document.querySelector("#num3").value); // 위와 동일한 명령어 
+
+        //     var tot = total(k,m,e); // 합계값구하는 함수를 가져와야 한다.
+
+        //     // var total = k+m+e;
+        //     var average = tot/3;
+        // }
+        // function total(a,b,c){ // 합계구하는 식을 함수로 만들경우
+
+        //     return(a+b+c);  // 합계값을 내보내고
+        // }
+
+        // 구구단출력
+        // me
+        // function (){
+        //     var a = praseInt( $("#gugu").val());
+            
+        //     //for( var i=2; i<=9; i++){
+        //     for( var k=1; k<=9; k++){
+        //         document.write(`${a}*${k}=${a*k}<br>`);
+        //     }
+        // }
+        // teacher
+        function dan(end){
+            var num = Number($("#gugu").val())
+            for( var i=1; i<=end; i++){
+                $("#gugudan").append(`${num}*${i} = ${num*i} <br>`)
+            }
+        }
+
+
+        // 민수가 혈당을 체크하였다
+            //혈당수치에 따라 구분ㄹ하여 출력하시오
+            // 70~100일경우 공복혈당
+            //90~140일경우 식후 2시간 혈당
+            //정상혈당 수치는 70~100, 90~140이다 전상수치보다 5.7%미만이면 
+            //당화 혈색소라고 출력
+            //input태그값 가져오는 함수 수치에 따라 결과출력하는 합수
+
+        // 종우가 비만도를 측정하였다
+        // 비만도 bmi 지수계산은 몸무게/((키/100)*(키/100))
+        // BMI지수가 18.5이하면 저체중
+        // 18.5~22.9사이라면 정상
+        // 23.0~24.9사이면 과체중
+        // 25이상은 비만
+
+    // 하나는 onclick으로 하나는 함수내에서 또다른 함수실행으로
+
+
+    </script>
+
+</head>
+<body>
+
+    <!-- <button onclick="plus(10,20,30)">함수실행</button>  
+    <button onclick="prints()">결과출력</button>
+    <div id="res"></div>
+
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3"> <br>
+
+    <button onclick="avg()">성적 평균 계산</button> -->
+
+    <br><br>
+<!--input#gugu 입력한 숫자에 맞는 구구단 출력하는 함수 만들기
+        매개변수 숫자까지의 구구단 만 출력
+-->
+    <input type="text" id="gugu">
+    <button onclick="dan(7)">구구단 출력</button>
+    <div id="gugudan"></div>
+
+</body>
+</html>
