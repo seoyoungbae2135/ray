@@ -90,7 +90,7 @@
         //     document.getElementById("res").innerHTML = result;
         // }
 
-        $(function(){ //window.onload+function(){} - html문서가 브라우저에 모두 로드되면 
+        //$(function(){ //window.onload+function(){} - html문서가 브라우저에 모두 로드되면 
 
        
 
@@ -147,34 +147,103 @@
         // 23.0~24.9사이면 과체중
         // 25이상은 비만
 
-    // 하나는 onclick으로 하나는 함수내에서 또다른 함수실행으로
+
     // 2023.12.04 report
 
-    function check(){
-        var value = Number($("#blood").val);
-        if(value >= 70 && value <= 100){
-            document.write("공복혈당<br>");
-        }else if(value >= 90 && value <= 140){
-            document.write("식후 2시간 혈당<br>");
-        }else if(value < (70 - (70 * 0.057))){
-            document.write("당화혈색소<br>");
-        }
+    // function check(){
+    //     var value = Number($("#blood").val());
+    //     if(value >= 70 && value <= 100){
+    //         document.write("공복혈당<br>");
+    //     }else if(value >= 90 && value <= 140){
+    //         document.write("식후 2시간 혈당<br>");
+    //     }else if(value < (70 - (70 * 0.057))){
+    //         document.write("당화혈색소<br>");
+    //     }
+    // }
+
+    // function wgt(){
+    //     var gram = Number($("#kgram").val());
+    //     var meter = hgt()
+    //     var bmi = gram / (( meter / 100 ) * ( meter / 100 ));
+    //     if( bmi <= 18.5 ){
+    //         document.write("저체중");
+    //     }else if( bmi >= 18.5 && bmi <= 22.9 ){
+    //         document.write("정상");
+    //     }else if( bmi >= 23 && bmi <= 24.9 ){
+    //         document.write("과체중");
+    //     }else if( bmi >= 25 ){
+    //         document.write("비만");
+    //     }
+    // }
+
+    // function hgt(){
+    //     var meter = Number($("cmeter").val());
+    //     return meter;
+    // }
+
+    // homework teacher
+    //혈당
+    function suger(){
+        var v = getBlood();
+        var out = "정상혈당";
+        if( 70<= v && v<=100)
+            out += "공복혈당"
+        if(90<= v && v <= 140)
+            out += "식후 2시간 혈당";
+        if( 66.1 > v)
+            out = "당화혈색소";
+        $("#resblood").text(out);
+    }
+    function getBlood(){
+        var v = Number($("#bl").val());
+        return v;
+    }
+
+    //BMI
+    function n(v){
+        return Number(v);  // Number 를 줄여서 n으로 만들어 사용할 수 있다
+    }
+
+    function bmi(){
+        var tall = n($("#tall").val());
+        var wg = n($("#wg").val());
+
+        var idx = wg / ((tall/100)*(tall/100));
+        var out = "저체중";
+        if( idx >= 25) out = "비만";
+        else if(idx >= 23) out = "과체중";
+        else if( idx >= 18.5 ) out= "정상";
+        $("#obesity").text(out);
     }
 
 
 
-});
     </script>
 
 </head>
 <body>
 
-    <input type="text" id="blood">
+    <!-- teacher-->
+
+    <input type="text" id="bl">
+    <button onclick="suger()">혈당수치</button>
+    <div id="resblood"></div>
+
+    <input type="text" id="tall" placeholder="키">
+    <input type="text" id="wg" placeholder="몸무게">
+    <button onclick="bmi()">비만도</button>
+    <div id="obesity"></div>
+
+    <!-- <input type="text" id="blood">
     <button onclick="check()">입력</button>
     <div id="bloodsugar"></div>
 
-    <input type="text" id="bmi">
-    <button oneclick=""
+    <input type="text" id="kgram">
+    <button onclick="wgt()">체중</button>
+
+    <input type="text" id="cmeter">
+    <button onclick="hgt(meter)">신장</button>
+    <div id="weight"></div> -->
 
 
 
