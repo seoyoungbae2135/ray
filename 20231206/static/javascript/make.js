@@ -19,7 +19,7 @@ function makeTable(){
     
     opener.$("#draw").html(table)  // $("#draw",opener.document)로 해도된다
 
-    opener.$("#size").attr("disabled",false);
+    opener.$("#size").attr("disabled",false); // #size를 활성화 시킨다
     window.close();  //자기창을 닫는다
     //opener.document.getElementById("draw").innerHTML="aaa"; //부모쪽 javascript 제어 
     
