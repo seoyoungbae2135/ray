@@ -39,7 +39,7 @@
     display:flex;
     height:100%;
     width: calc(1200px * 4);
-    position:relative; /*여기부터 아래2칸 이미지 슬라드를 위한 코드*/
+    position:relative; /*여기부터 아래2칸 이미지 슬라이드를 위한 코드*/
     right:0px;
     transition: right 1s ease;
     /* margin-left:-2400px; 3번째이미지가 나타난다*/

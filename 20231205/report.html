@@ -10,25 +10,58 @@
     <style>
         #wrap{
             width:100%;
-            display:grid
+            display:flex;
+            justify-content:space-evenly;
+            /* align-items:center; */
         }
         #com{
-            width=
+            width:450px;
+            position:relative;
+            display:flex;
+            align-items:center;
+        }
+        .rock{
+            width:300px;
+            position:absolute;
+        }
+        .paper{
+            width:300px;
+            position:absolute;
+            display:none;
+        }
+        .scissors{
+            width:300px;
+            position:absolute;
+            display:none;
+        }
+        #result{
+            width:300px;
+            
+        }
+        #user{
+            width:600px;
         }
 
     </style>
+
+    <script>
+
+
+
+    </script>
 
 </head>
 <body>
 
     <div id="wrap">
         <div id="com">
-            <div class="rock"><img src="./static/image/rock.png"></div>
+            <div class="rock"><img src="./static/image/rock.png "></div>
             <div class="paper"><img src="./static/image/paper.png"></div>
             <div class="scissors"><img src="./static/image/scissors.png"></div>
         </div>
+        
         <div id="result">
-            
+            <h2>비김</h2>
         </div>
         <div id="user">
             <div class="roc"><img src="./static/image/rock.png"></div>
