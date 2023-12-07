@@ -1,5 +1,4 @@
-// 
-
+// memo.html link
 
 //생성자 함수
 function memo( num, content, importance ){  //작성된 메모저장 객체
@@ -108,7 +107,15 @@ function del_memo( n ){
 
 }
 
-
+/*
+    2023-12-07 과제
+    맵 만들어 오기 : 다음주 화요일 까지
+    가로 7칸 세로7칸 의 정사각형 블루마블판 만들기
+    중앙에 이미지 넣기
+    대한민국 과 일본 도시이름으로 칸을 채워주세요
+    각면의 색 넣기
+    모서리에 이미지 넣기
+*/
 
     // 태그와 문자열를 추가하는 방법 (javascript로하는 정석적인 처리방법)
     //var select = document.getElementById("import");
