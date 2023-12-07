@@ -72,7 +72,7 @@
     @keyframes loading2{
         0%{transform:rotate(0deg);}
         100%{transform:rotate(360deg)}
-    }
+    } */
 
     #dice{
         width:800px; height:800px;
@@ -86,8 +86,8 @@
     #box{
         width:300px; height:300px;
         position:absolute;
-        transform-style:preserve-3d; /* 3D 구현
-        animation:dice 3s ease-in infinite;
+        transform-style:preserve-3d; /* 3D 구현 */
+        animation:dice 5s linear infinite;
     }
 
     .number{
@@ -103,7 +103,7 @@
     }
     .one{
         background:#eee;
-        transform: translateZ(150px); /*Z축으로 이동
+        transform: translateZ(150px); /*Z축으로 이동*/
     }
     .two{
         background:#999;
@@ -111,7 +111,7 @@
     }
     .three{
         background:#ccc;
-        transform: translateX(-150px) rotateY(90deg); /*X축으로 이동, Y축으로 회전
+        transform: translateX(-150px) rotateY(90deg); /*X축으로 이동, Y축으로 회전*/
     }
     .four{
         background:#bbb;
@@ -131,7 +131,7 @@
         100%{
             transform:rotateY(360deg) rotateX(720deg) rotateZ(1080deg);
         }
-    } */
+    } 
 
     /* #slide{
         width:30px; height:20px;
@@ -157,7 +157,7 @@
         100%{width:1000px; height:1000px; }
     } */
 
-    img{width:100%}
+    /* img{width:100%}
     #box{
         width:30px; height:30px;
         overflow:hidden;
@@ -176,7 +176,7 @@
             top:50%;
             transform:translate(-50%,-50%);
         }
-    }
+    } */
 
 
 </style>
@@ -199,11 +199,11 @@
 
     <!--teacher-->
 
-    <div id="box">
+    <!-- <div id="box">
         <img src="./static/image/img.jfif" alr="이미지">
-    </div>
+    </div> -->
 
-    <!-- <div id="dice">
+    <div id="dice">
         <div id="box">
             <div class="number one">1</div>
             <div class="number two">2</div>
@@ -227,7 +227,7 @@
                 <div class="ball"></div>
             </div>
         </div>
-    </div> -->
+    </div>
     
 </body>
 </html>
