@@ -20,8 +20,8 @@ $(function(){
 
 function openPage(page){
 
-    var sheight = screen.availHeight; // 현재 스크린의 높이 값(px)을 sheight에 저장
-    var swidth = screen.availWidth;  // 현재 스크린의 너비값(px)을 swidth에 저장
+    var sheight = screen.availHeight; // 현재 스크린의 사용가능영역 높이 값(px)을 sheight에 저장
+    var swidth = screen.availWidth;  // 현재 스크린의 사용가능영역 너비값(px)을 swidth에 저장
     
     // 새페이지 - window.open(주소, 대상, 옵션)
     // 대상(target) - _blank, _self, _parent(자식창이생긴다) 옵션에 "width=500,hidgth=500" 의경우 500*500 브라우저가 생긴다
