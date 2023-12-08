@@ -110,7 +110,7 @@ function del_memo( n ){
 /*
     2023-12-07 과제
     맵 만들어 오기 : 다음주 화요일 까지
-    가로 7칸 세로7칸 의 정사각형 블루마블판 만들기
+    가로 7칸 세로7칸 의 정사각형 부루마블판 만들기
     중앙에 이미지 넣기
     대한민국 과 일본 도시이름으로 칸을 채워주세요
     각면의 색 넣기
@@ -118,15 +118,15 @@ function del_memo( n ){
 */
 
     // 태그와 문자열를 추가하는 방법 (javascript로하는 정석적인 처리방법)
-    //var select = document.getElementById("import");
+    //var select = document.getElementById("import"); //도큐먼트 아래에 있는 #impotr를 가져와서 변수 select에 저장
     //var opt = document.createElement("option")  //도큐먼트 아래에 새로운 option 태그를 만들어라
     //var text = document.createTextNode("매우중요") // 새로운 text를 만들어라
     //opt.appendChild(text); //option 에 자식태그로 text를 넣어라
     //select.appendChild(opt); // select에 자식태그로 option을 넣어라 
     //새로운 html 태그생성 - document.createElement("태그이름")
     // text 생성 - .createTextNode("텍스트")
-    //태그의 속성 추가 - 태그.setAttribute("id", "myname"); -> 태그에 id를 넣어준다
-    // 태그의속성 가져오기 - 태그. getAttribute("id", "myname") - 태그의 id를 가져온다
+    //태그의 속성 추가 - 태그.setAttribute("id", "myname"); -> 태그에 id myname을 넣어준다
+    // 태그의속성 가져오기 - 태그. getAttribute("id", "myname") - 태그의 id myname을 가져온다
 // 이것을 jquery로하면
     // createElement("div") -> $("div") 
     // createTextNode("아하") -> .text("아하")

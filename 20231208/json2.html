@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+    // post.com 로긴 => colection 클릭 => new colection 생성 => get에 영화진흥위원회 OPEN API의 주간주말박스오피스에서 REST방식의기본요청ULR을 xml전까지 복사
+    // 하여 붙여넣기 .json을 마지막에 추가 => Query Parms의 key 아래에 key라고 입력 => value아래에 영화진흥위원회에서 발급받은 key값 붙여넣기 => key두번째하단에 targetDt 입력 => value두번째하단에
+    // 날짜를 yyyymmdd형식으로 넣는다 => send 클릭 => 발생된 주소를 getJSON("여기에붙여넣기")
+    $.getJSON("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=12d5d8f0332b9af65a51573f0f305009&targetDt=20231203",
+        function(data){
+            let movie = data.boxOfficeResult.weeklyBoxOfficeList ; //객체 키이름
+
+            //document.write( movie[0].movieNm)
+            //console.log(movie);
+
+     });
+     function view( movie ){  // 테이블을 만들어서 출력
+        var table =`<table style='width:1000px;'>`;  // 
+            table += `<thead> <tr> <th>순위</th><th>영화</th>
+                    <th>누적관객</th><th>매출액</th></tr></thead>`;
+
+        for( var mv of movie){   // mv에 movie에 있는 객체 value를 저장 
+            table += `<tr> <td>${mv.rank}</td> <td>${mv.movieNm}</td>
+                <td>${Number(mv.audiAcc).toLocaleString()+"명"}</td>
+                <td>${Number(mv.salesAcc).toLocaleString()+"원"}</td> </tr> `;
+        }
+        table += `</table>`; //테이블 태그를 닫는다.
+        document.write( table );
+     }
+    </script>
+
+
+</head>
+
+
+
+<body>
+    
+
+
+</body>
+</html>
