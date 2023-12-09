@@ -1,0 +1,36 @@
+
+#wrap{
+    width:1300px;
+    margin:0 auto;
+    left:100px;
+    top:100px;
+    display:grid;
+    grid-template-columns:repeat(26, 1fr);
+    grid-auto-rows:50px;
+    border:2px solid #000;
+}
+.city, .color, .corner, .plate{
+    display:flex;
+    border:2px solid #000;
+    justify-content:center;
+    align-items:center;
+}
+#wrap .corner1{
+    grid-column:1/4;
+    grid-row:1/4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #000;
+}
+#wrap .sungsan{
+    grid-column:4/6;
+    grid-row:1/3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #000;
+}
+#wrap
+
+
