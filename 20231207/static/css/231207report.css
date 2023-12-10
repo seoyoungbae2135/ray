@@ -3,11 +3,13 @@
     width:900px;
     margin:0 auto;
     left:100px;
+    margin-top:170px;
     display:grid;
     grid-template-columns:repeat(20, 1fr);
     grid-auto-rows:45px;
     border:2px solid #000;
     transform:translate(rotate30deg);
+    rotate:45deg;
 
 }
 #wrap .city{
@@ -24,30 +26,37 @@
 #wrap .city:nth-child(2){  /*삿포로*/
     grid-column:4/6;
     grid-row:1/3;
+    rotate:180deg;
 }
 #wrap .city:nth-child(3){  /*강릉*/
     grid-column:6/8;
     grid-row:1/3;
+    rotate:180deg;
 }
 #wrap .city:nth-child(4){ /*교토*/
     grid-column:8/10;
     grid-row:1/3;
+    rotate:180deg;
 }
 #wrap .city:nth-child(5){  /*부여*/
     grid-column:10/12;
     grid-row:1/3;
+    rotate:180deg;
 }
 #wrap .city:nth-child(6){  /*나고야*/
     grid-column:12/14;
     grid-row:1/3;
+    rotate:180deg;
 }
 #wrap .city:nth-child(7){  /*경주*/
     grid-column:14/16;
     grid-row:1/3;
+    rotate:180deg;
 }
 #wrap .city:nth-child(8){  /*고베*/
     grid-column:16/18;
     grid-row:1/3;
+    rotate:180deg;
 }
 #wrap .city:nth-child(9){  /*우주여행*/
     grid-column:18/21;
@@ -85,6 +94,7 @@
 #wrap .city:nth-child(17){  /*수원*/
     grid-column:1/3;
     grid-row:4/6;
+    rotate:90deg;
 }
 #wrap .city:nth-child(18){
     grid-column:3/4;
@@ -102,10 +112,12 @@
 #wrap .city:nth-child(21){ /*제주*/
     grid-column:19/21;
     grid-row:4/6;
+    rotate:270deg
 }
 #wrap .city:nth-child(22){  /*히로시마*/
     grid-column:1/3;
     grid-row:6/8;
+    rotate:90deg;
 }
 #wrap .city:nth-child(23){
     grid-column:3/4;
@@ -120,10 +132,12 @@
 #wrap .city:nth-child(25){ /*오사카*/
     grid-column:19/21;
     grid-row:6/8;
+    rotate:270deg;
 }
 #wrap .city:nth-child(26){  /*여수*/
     grid-column:1/3;
     grid-row:8/10;
+    rotate:90deg;
 }
 #wrap .city:nth-child(27){
     grid-column:3/4;
@@ -138,10 +152,12 @@
 #wrap .city:nth-child(29){   /*인천*/
     grid-column:19/21;  
     grid-row:8/10;
+    rotate:270deg;
 }
 #wrap .city:nth-child(30){   /*오키나와*/
     grid-column:1/3;
     grid-row:10/12;
+    rotate:90deg;
 }
 #wrap .city:nth-child(31){
     grid-column:3/4;
@@ -156,10 +172,12 @@
 #wrap .city:nth-child(33){  /*요코하마*/
     grid-column:19/21;
     grid-row:10/12;
+    rotate:270deg;
 }
 #wrap .city:nth-child(34){   /*울산*/
     grid-column:1/3;
     grid-row:12/14;
+    rotate:90deg;
 }
 #wrap .city:nth-child(35){
     grid-column:3/4;
@@ -174,10 +192,12 @@
 #wrap .city:nth-child(37){    /*부산*/
     grid-column:19/21;
     grid-row:12/14;
+    rotate:270deg;
 }
 #wrap .city:nth-child(38){   /*구마모토*/
     grid-column:1/3;
     grid-row:14/16;
+    rotate:90deg;
 }
 #wrap .city:nth-child(39){
     grid-column:3/4;
@@ -192,10 +212,12 @@
 #wrap .city:nth-child(41){   /*도쿄*/
     grid-column:19/21;
     grid-row:14/16;
+    rotate:270deg;
 }
 #wrap .city:nth-child(42){   /*대구*/
     grid-column:1/3;
     grid-row:16/18;
+    rotate:90deg;
 }
 #wrap .city:nth-child(43){
     grid-column:3/4;
@@ -210,6 +232,7 @@
 #wrap .city:nth-child(45){   /*서울*/
     grid-column:19/21;
     grid-row:16/18;
+    rotate:270deg;
 }
 #wrap .city:nth-child(46){    /*무인도*/
     grid-column:1/4;
