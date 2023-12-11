@@ -30,12 +30,12 @@ body{background:var(--bg-color);}
     display:flex;
     flex-direction:column;
     align-items:center;
-    column-gap:10px;
+    row-gap:10px;
     color:var(--default-color);
 }
 .chatInput , .chat_bt{
     width:100%;
-    display:plex;
+    display:flex;
     align-items: center; justify-content:end;
     font-size:var(--label-size);
 
