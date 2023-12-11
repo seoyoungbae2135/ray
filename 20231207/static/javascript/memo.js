@@ -103,7 +103,7 @@ function del_memo( n ){
         //unwrap() ; 선택한 태그의 부모를 삭제
         //parent.empty()
         //parent.remove()
-        //parent.remove()
+        //parent.unwrap()
 
 }
 
