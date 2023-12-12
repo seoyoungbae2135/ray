@@ -91,7 +91,7 @@ function game_init(){
                     <b class='pnum'>${i}</b>
                     <input type='color' id='pcl${i}' value='${player_list[i-1].color}'>
                     <div class='steate'>
-                        자금 : <b id='pm${i}'>${player_list[i-1].money}</b>
+                        자금 : <b id='pm${i}'>${player_list[i-1].money}만원</b>
                         보유도시 : <b id='pcity${i}'>${player_list[i-1].zone.length}개</b> 
                     </div>
                 </div>`

@@ -21,7 +21,7 @@
 
 .zone{
     border:1px solid white;
-    background:rgb(153, 220,177);
+    background:rgb(98,164,255);
 }
 .top{ height:200px}
 
@@ -72,9 +72,9 @@
 
 .zone .zone_name{
     font-size:35px;
-    font-weight:800;
+    font-weight:700;
     font-family:"휴먼매직체";
-    color:#222845;
+    color:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -96,7 +96,7 @@
 }
 .pn{ padding:5px; width:100%;}
 .pn input[type=range]{
-    width:170px;
+    width:150px;
     -webkit-appearance: none;
     background:green;
     border-radius:10px;
