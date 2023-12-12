@@ -15,7 +15,7 @@ const land_purchase=[    //각도시의 매입가격 (만단위)
 ];
 
 const bg_image=[  // 모서리구역의 배경 이미지
-    "stsrt.png", "island.png", "fund.png", "travel.png"
+    "start.png", "island.png", "fund.png", "travel.png"
 ];
 
 //각 구역의 객체 생성자 함수
@@ -41,7 +41,9 @@ function player(num, color){
 let fund = 0;//사회복지기금 모금금액 저장변수
 let island_ = new Array(); //무인도에 도착한 플레이어
 let zone = new Array(); //각 구역의 객체저장 배열
+let player_list = new Array();//게임 참가자 
 
+//함수정의
 function zone_create(){
     for( var i=0; i< zone_name.length; i++){
         var color = zone_color[0];
@@ -68,14 +70,55 @@ function zone_create(){
 function zone_draw(){
     $.each(zone, function( idx, obj){
         if(idx == 0 || idx==8 || idx==23 || idx==31 ){
-            $(".zone").eq(idx).css("background-image", "url( ../image/" +obj.back+")");
+            $(".zone").eq(idx).css("background-image", "url( ./static/image/" +obj.back+")");
             $(".zone").eq(idx).css("background-size","cover");
             $(".zone").eq(idx).css("background-position","center");
         }else{
             $(".zone").eq(idx).children(".zone_name").text( obj.name);
+            $(".zone").eq(idx).children(".zone_color").css("background-color", obj.color);
         }
     });
 }
+function game_init(){
+    var pc = Number( $("#player_number").val());
+
+        $("#game_state").html("<h3>게임현황</h3>");
+
+        for(var i=1; i<=pc; i++){
+            player_list.push( new player(i, "#ff0000"));
+            $("#game_state").append(
+                `<div class='ps'>
+                    <b class='pnum'>${i}</b>
+                    <input type='color' id='pcl${i}' value='${player_list[i-1].color}'>
+                    <div class='steate'>
+                        자금 : <b id='pm${i}'>${player_list[i-1].money}</b>
+                        보유도시 : <b id='pcity${i}'>${player_list[i-1].zone.length}개</b> 
+                    </div>
+                </div>`
+            );
+        }
+       
+        $("#game_state").show();
+        $("#set_player").hide();
+}
+function change_pcl{
+
+}
 $(function(){
-    zone_create()
+    zone_create();
+    zone_draw();
+
+    $("#enroll").on("click", game_init );
+    $("#player_number").on("change", function(){
+        $(this).next().text($(this).val() + "명");
+    } );
+    $("#player_number + label").text(2+"명");
+
+    $("input[type=color]").on("change", change_pcl);
 });
+
+//과제  - 각 구역의 객체를 json으로 작성해오세요
+// city.json 으로
+// zone_Object 생성자 함수로 생성한 객체들을 
+//zone_creator 없이 동작 가능할 것 
+        
