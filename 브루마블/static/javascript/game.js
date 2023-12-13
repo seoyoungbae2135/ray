@@ -81,7 +81,7 @@ function game_todo( location){
     //구역객체의 인덱스로도 사용가능
 
     var city = zone[location];
-    var gamer = player_list[turn-1];
+var gamer = player_list[turn-1];!1
 
     if(city.purchase == 0){  //매입금이 0인곳
         // 16-복지기금, 24-공항, 28-기금납부, 8-무인도, 0-출발지
@@ -95,7 +95,7 @@ function game_todo( location){
 
             $(".zone").eq(location).children(".zone_name").
                 css("background",gamer.color); //플레이어색으로 변경
-
+                
         }
     }else{  //도시의 주인이 있는경우 도시의주인에게 토지매입금액만큼 통행료지불
         var owner = city.owner;

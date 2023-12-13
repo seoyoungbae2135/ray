@@ -205,7 +205,8 @@ function fundpayment(gamer){ //플레이어의 돈을 복지기금으로 지불(
 }
 
 function island(gamer){ //3턴동안 탈출불가
-
+    alert("3턴 동안 탈출이 불가합니다");
+    island_.gamer
 }
 
 function complate(gamer){ //출발지를 도착하거나 통과하면 20만원 보너스

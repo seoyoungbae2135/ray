@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <style>
+        #toy{
+            background-color:red;
+            width200px
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="box">
+        <ul id="toy">
+            <li class="favorite">1</li>
+            <li class="favorite">2</li>
+            <li class="favorite">3</li>
+            <li class="favorite">4</li>
+            <li class="favorite">5</li>
+            <li class="favorite">6</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    var toy = document.getElementById("toy");
+    toy.style.listStyle="none";
+    
+    console.log(toy);
+
+    console.log(document.getElementsByTagName("ul"));
+</script>
