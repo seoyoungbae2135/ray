@@ -4,15 +4,17 @@ function player(num, color){
     this.num=num;
     this.color=color;
     this.money=100;  //초기게임머니 100만원
-    this.zone=new Array(); //매입한 토지를 배열로 저장
+    this.zone=0; //매입한 토지 수량 저장
     this.drift_turn=0; //무인도에 남은 턴
     this.location=0; //현재위치
+    this.파산=false; //자금부족으로 파산한 경우 ture
 } 
 //전역변수
 let fund = 0;//사회복지기금 모금금액 저장변수
 let island_ = new Array(); //무인도에 도착한 플레이어
 let zone = new Array(); //각 구역의 객체저장 배열
 let player_list = new Array();//게임 참가자 
+let 탑승객 = 0; //인천공항에 도착한 플레이어
 
 
 
@@ -45,7 +47,7 @@ function game_init(){
                     <input type='color' id='pcl${i}' value='${player_list[i-1].color}'>
                     <div class='steate'>
                         자금 : <b id='pm${i}'>${player_list[i-1].money}만원</b>
-                        보유도시 : <b id='pcity${i}'>${player_list[i-1].zone.length}개</b> 
+                        보유도시 : <b id='pcity${i}'>${player_list[i-1].zone}개</b> 
                     </div>
                 </div>`
             );
@@ -112,7 +114,7 @@ function overlap(location){ //말이 생성되거나 이동했을때 위치에 �
     }
 }
 
-function find_location(n){  //플레이어 말이 표시될 위치 또는 이동할 위치 찾기
+function find_location(n){  //몇번째 zone클래스인지 알아내는 함수, 플레이어 말이 표시될 위치 또는 이동할 위치 찾기
     var index=0
     $(".zone").each(function(idx, item){
         var num = Number($(item).data("num")); //zone클래스 태그의 data-num값
@@ -174,6 +176,8 @@ $(function(){
     } );
     $("#player_number + label").text(2+"명");
 
+    $(".zone").on("click", airport_move);   //에어포트 위치에서 가고싶은곳으로 클릭하는 코드 airport_move함수생성
+
     
 });
 
@@ -188,14 +192,17 @@ function func_link(){
 
 function welfare(gamer){  //위치에 도착한 플레이어가 복지기금 전액 가져가기
     alert("복지기금 ${fund}만원 받았습니다.");
-    gamer.money += fund: //fund변수는 복지기금저장해두는곳
+    gamer.money += fund; //fund변수는 복지기금저장해두는곳
     fund=0;
     $("#pm"+gamer.num).text(gamer.money+"만원");
 }
 
 function airport(gamer){ //플레이어가 원하는 곳으로 이동(마우스 클릭)
+    alert("가고싶은 위치를 선택하세요.");
+    탑승객 = gamer.num;  //인천공항에 도착한 플레이어 번호 저장, 탑승객변수에 있는 번호만 이용가능
 
 }
+
 
 function fundpayment(gamer){ //플레이어의 돈을 복지기금으로 지불(20만원)
     alert("복지기금으로 20만원 지불했습니다.");
@@ -205,13 +212,15 @@ function fundpayment(gamer){ //플레이어의 돈을 복지기금으로 지불(
 }
 
 function island(gamer){ //3턴동안 탈출불가
-    alert("3턴 동안 탈출이 불가합니다");
-    island_.gamer
+    gamer.drift_turn=3;
+    island_.push(gamer.num);
 }
 
 function complate(gamer){ //출발지를 도착하거나 통과하면 20만원 보너스
- 
+    gamer.money += 20;
+    $("#pm"+gamer.num).text(gamer.money+"만원");
 }
+
 
 //20231213 과제 무인도와 인천공항 만들기, 자바교재 갖고오기
 
