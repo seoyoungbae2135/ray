@@ -1,3 +1,27 @@
+/*
+    function rolling(obj); 주사위 굴리기위한함수 -게임진행
+        매개변수 - obj : 주사위 굴리기버튼태그
+    function stop(obj) ; 주사위멈추게하는함수 - 게임진행
+        매개변수 - obj : 주사위 멈추기버튼태그
+    function meeple_move(); 플레이어말을 주사위값에따라 이동시키는함수 - 겡미진행
+    function 다음턴(who); 다음차례가누구인지 정해주는 함수 -게임진행
+        매개변수 - who :현재턴 플레이어번호
+    function 말위치변경(gamer, old_location); 말이이동할 경우 이전의치와 현재위치 - 게임진행
+        매개변수 - gamer : 현재 플레이어객체
+                  old_location : 현재플레이어의 주사위 값에따라 이동하기전의위치
+    function game_todo( location, gamer);각 구역에 도착시 해야할 일 - 게임진행
+        매개변수 - location : 말이 도착한 위치(div.zone)
+                    gamer : 현재턴 플레이어 객체 
+    function 파산처리(gamer) 돈이0이되면 파산처리함수 - 게임진행
+        매개변수 - ganer : 현재턴 플레이어 객체
+    function airport_move(); 인천공항에 도착한 플레이어가 선택한 위치로 이동하는 함수-게임진행
+
+rolling -> stop -> meeple_move -> 말위치변경 -> game_todo ->
+
+*/
+
+
+
 //전역변수
 const dice_img=["dice1.png", "dice2.png","dice3.png","dice4.png",
                 "dice5.png","dice6.png"] //주사위이미지배열
@@ -126,7 +150,7 @@ function game_todo( location , gamer){ //해당구역에 도착하면 해야하�
     //locarion의값은 몇번째zone클래스인지 알수도있지만 , zone배열의
     //구역객체의 인덱스로도 사용가능
 
-    var city = zone[location];
+    var city = zone[location]; // 도착한곳 데이터
     
     if(city.purchase == 0){  //매입금이 0인곳
         // 16-복지기금, 24-공항, 28-기금납부, 8-무인도, 0-출발지

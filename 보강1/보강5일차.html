@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        // for(var i=1; i<=9; i++)
+        //     document.write( 2+"*"+i+"="+(2*i)+"<br>");
+
+        // var sum=0;
+        // for(var i=1; i<=100; i++)
+        //     sum += i;
+        sum1_100();  // 위와같이 반복되는 코드를 함수로만들어 사용
+        //document.write(sum + "<br>");
+        write( sum );
+
+        var sum = 0
+        for(var i=100; i>=80; i--){
+            sum -= i;
+        }
+        write( sum );
+
+        // sum=0;
+        // for( var i=1; i<=100; i++)
+        //     sum+=i;
+        sum1_100();
+        write(sum**2);
+
+        function write(out){
+            document.write(out+"<br>");
+        }
+
+        function sum1_100(){
+            var sum=0;
+            for(var i=1; i<=100; i++)
+                sum += i;
+            return sum;  // 결과를 사용해야하는 경우 return 
+        }
+
+    //함수 정의 만들기
+    //1.함수 이름 정하기 - 함수의 목적에 맞는 이름(함수를 통해 위치를 찾는다-find)
+    //2.매개변수 유무 
+    function name(){  
+
+    }
+        
+    </script>
+
+</head>
+<body>
+
+
+    
+</body>
+</html>
